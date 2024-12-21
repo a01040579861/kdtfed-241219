@@ -12,12 +12,12 @@
     width: 390px;
     height: 800px;
     overflow: hidden;
-    border: 1px solid #ccc;
+    border: 1px solid #e9e7e7;
 
     #content_header {
       width: 100%;
       height: 47px;
-      border: 1px solid #ccc;
+      border: 1px solid #e9e7e7;
     }
 
     #main_title {
@@ -99,17 +99,17 @@
           display: flex;
           gap: 6px;
           .like {
-            color: #ccc;
+            color: #e9e7e7;
             font-weight: bold;
             .fa-heart {
-              color: #f00;
+              color: #ff0000;
             }
           }
           .view {
             font-weight: bold;
-            color: #ccc;
+            color: #e9e7e7;
             .fa-eye {
-              color: #ccc;
+              color: #e9e7e7;
             }
           }
         }
