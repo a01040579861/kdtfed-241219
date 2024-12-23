@@ -67,7 +67,6 @@ Freshman
 git add .
 git commit -m "freshman"
 git push origin master
-
 Branch : 최상위 repository 폴더 안에 하위 세부폴더
 
 현, company-project repository
