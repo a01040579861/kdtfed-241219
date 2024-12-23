@@ -96,29 +96,23 @@
           font-weight: bold;
         }
         .art_info {
-          display: flex;
-          gap: 3px;
-          .like {
-            color: #e9e7e7;
-            font-weight: bold;
-            .fa-heart {
-              color: #ff0000;
-            }
-          }
+          .like,
           .view {
-            font-weight: bold;
             color: #e9e7e7;
-            .fa-eye {
-              color: #e9e7e7;
+            font: bold 0.82rem/1 "arial";
+            i {
+              color: #ff0000;
+              margin-right: 3px;
+              &.fa-eye {
+                color: #ccc;
+              }
             }
           }
         }
         .art_text {
           width: 100%;
           margin: 0;
-          font-size: 0.6rem;
-          font-weight: 600;
-          line-height: normal;
+          font: 700 0.76rem/1 "nomal";
           /* font: bold 0.8rem/1 "arial"
           font-size/font-family/text-align/line-height */
         }
