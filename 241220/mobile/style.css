@@ -30,7 +30,7 @@
       align-items: center;
       font-weight: nowrap;
       width: 500px;
-      gap: 30px;
+      gap: 40px;
       margin-left: 35px;
       .nav-item {
         font-size: 1.2rem;
@@ -55,16 +55,16 @@
       padding: 40px 35px 35px;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 40px;
       article {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 3px;
         .profile {
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 3px;
           img {
             width: 28px;
             height: 28px;
@@ -92,12 +92,12 @@
         }
         .art_title {
           width: 100%;
-          font-size: 1.3rem;
+          font-size: 1.12rem;
           font-weight: bold;
         }
         .art_info {
           display: flex;
-          gap: 6px;
+          gap: 3px;
           .like {
             color: #e9e7e7;
             font-weight: bold;
@@ -116,9 +116,11 @@
         .art_text {
           width: 100%;
           margin: 0;
-          text-align: left;
-          font-size: 0.61rem;
-          font-weight: bold;
+          font-size: 0.6rem;
+          font-weight: 600;
+          line-height: normal;
+          /* font: bold 0.8rem/1 "arial"
+          font-size/font-family/text-align/line-height */
         }
       }
     }
