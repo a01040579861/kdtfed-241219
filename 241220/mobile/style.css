@@ -1,6 +1,6 @@
 @import url("./styles/reset.css");
 
-#container {
+.container {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -8,24 +8,24 @@
   align-items: center;
   font-size: 18px;
 
-  #content {
+  .content {
     width: 390px;
     height: 800px;
     overflow: hidden;
     border: 1px solid #e9e7e7;
 
-    #content_header {
+    .content_header {
       width: 100%;
       height: 47px;
       border: 1px solid #e9e7e7;
     }
 
-    #main_title {
+    .main_title {
       font-size: 1.8rem;
       margin: 50px 35px 40px;
     }
 
-    #navigation {
+    .navigation {
       display: flex;
       align-items: center;
       font-weight: nowrap;
@@ -117,7 +117,7 @@
           width: 100%;
           margin: 0;
           text-align: left;
-          font-size: 0.6rem;
+          font-size: 0.61rem;
           font-weight: bold;
         }
       }
