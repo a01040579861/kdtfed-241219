@@ -1,0 +1,24 @@
+@import "./styles/reset";
+
+// 변수선언
+$contents-colors: (
+  bgColor: #ffde03,
+  subColor: #4833cc,
+  textColor: #cccccc,
+);
+
+body {
+  width: 100%;
+  height: 100vh;
+  // flex box start
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex box end
+  main {
+    width: 428px;
+    height: 926px;
+    background: map-get($contents-colors, bgColor);
+    box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.6);
+  }
+}
