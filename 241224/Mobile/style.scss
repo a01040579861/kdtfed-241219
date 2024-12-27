@@ -4,19 +4,16 @@
 body {
   width: 100%;
   height: 100vh;
-  // flex box start
+  font-size: 17px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 17px;
-  // flex box end
   main {
     width: 428px;
     height: 926px;
     background: map-get($contents-colors, bgColor);
     box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.6);
-    padding-top: 55px;
-
+    padding-top: 60px;
     #topContents {
       text-align: center;
       img {
@@ -40,15 +37,10 @@ body {
         margin-bottom: 10px;
       }
       ul {
-        // margin-right: 30px;
-        padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
-        li {
-          list-style: none;
-        }
       }
     }
     #bottomContents {
@@ -91,7 +83,6 @@ body {
     &.introBg {
       background: map-get($contents-colors, lightColor);
       padding: 60px 33px 135px;
-
       header {
         position: relative;
         width: 100%;
