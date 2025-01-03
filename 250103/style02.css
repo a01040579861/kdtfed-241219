@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="checkbox"]:checked + div {
+  height: 0px;
+}
+
+div {
+  width: 650px;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid crimson;
+}
