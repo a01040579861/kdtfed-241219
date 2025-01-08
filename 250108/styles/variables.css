@@ -1,0 +1,11 @@
+:root {
+  --main-light-color: #fff;
+  --main-dark-color: #000;
+  --btn-border-color: #bbb;
+  --border-main-color: #ddd;
+  --logo-font-color: #444;
+  --logo-hover-color: #68a8fc;
+  --lnb-font-color: #999;
+  --gnb-font-color: #555;
+  --sub-desc-color: #888;
+}
