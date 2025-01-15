@@ -1,0 +1,24 @@
+swiper
+
+slick-slider
+
+> jQuery
+
+> Javascript 관련 책
+
+*1960년대 설립 Ecma International 재단
+> 인터넷 // 웹 // script언어
+> Ecmascript 문법
+
+> Ecmascript 정석
+
+넷스케이프 > 브랜든아이크 개발자 1주일만에 만든언어!!!
+
+대한민국 > 한글 / 자음 모음 > 표준어 VS 방언
+- 2025년 기준
+- 국어편찬위원회
+
+- 동아출판사 /// 천재출판사 // 교학사
+
+아무리 어렵고 복잡한 알고리즘 구조를 맞이하더라도...
+Divide And Conquer : 분할정복 알고리즘
