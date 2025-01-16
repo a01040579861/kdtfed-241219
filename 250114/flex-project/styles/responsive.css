@@ -87,6 +87,7 @@
       }
     }
   }
+
   .about-content {
     flex-direction: column;
     padding: 50px 0;
@@ -116,7 +117,9 @@
   .testimonial {
     padding: 50px 0;
     .testimonial-content {
-      font-size: 1.61rem;
+      h2 {
+        font-size: 1.61rem;
+      }
     }
   }
 
@@ -170,7 +173,7 @@
     }
   }
 
-  .footer {
+  footer {
     min-width: 0;
     .footer-content {
       flex-direction: column;

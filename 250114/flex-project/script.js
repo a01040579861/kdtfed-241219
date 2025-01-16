@@ -19,6 +19,7 @@ window.addEventListener("scroll", () => {
     document.querySelector("header").classList.add("active");
     document.querySelector(".gototop").classList.add("active");
   } else {
+    document.querySelector("header").classList.remove("active");
     document.querySelector(".gototop").classList.remove("active");
   }
 });
@@ -58,24 +59,22 @@ $(document).ready(function () {
 
 /* JS에게 이벤트 대상이 누구인지 알려주기 */
 
-/* 이벤트 대상이 되어지는 요소 (*html에서 찾아온 태그 혹은 클래스 혹은 아이디 선택자)에게
-어떤 이벤트를 부여할 것인가 결정 */
+/* 이벤트 대상이 되어지는 요소(*html에서 찾아온 태그 혹은 클래스 혹은 아이디 선택자)에게 어떤 이벤트를 부여할 것인가 결정 */
 
 /* 이벤트를 첫 번째 적용할 때, 두 번째 적용할 때 상이하게 작동하도록 제어 */
-const trigger = document.querySelector(".trigger");
 
+/* trigger */
+const trigger = document.querySelector(".trigger");
 trigger.addEventListener("click", function () {
   this.classList.toggle("active");
-  const gnb = document.querySelector(".gnb");
   document.querySelector(".gnb").classList.toggle("active");
 });
 
-/* header menu event */
+/* menu */
 const menus = document.querySelectorAll(".gnb a, .gototop");
-// console.log(menus);
 menus.forEach((menu) => {
-  menu.addEventListener("click", function (e) {
-    e.preventDefault();
+  menu.addEventListener("click", function (event) {
+    event.preventDefault();
     const targetId = this.getAttribute("href");
     const targetElement = document.querySelector(targetId);
     const targetPosition = targetElement.offsetTop;
@@ -84,6 +83,5 @@ menus.forEach((menu) => {
       top: targetPosition,
       behavior: "smooth",
     });
-    // console.log(targetPosition);
   });
 });
