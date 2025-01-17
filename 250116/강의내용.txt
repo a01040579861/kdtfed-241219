@@ -1,0 +1,5 @@
+footer > inner > footer-content > ul.community>(li>a)*5+ul.network>(li>a)*5+ul.help>(li>a)*3
+
+a태그 : 기본적으로 외부로 이동을 시키게 하거나, 내부에서 어디론가 이동을 하도록 하게 만드는 본연의 성격
+
+statcounter
