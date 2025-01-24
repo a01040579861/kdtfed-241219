@@ -1,0 +1,43 @@
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+
+// 공통스타일
+@mixin notice-button {
+  width: 150px;
+  padding: $main-font-size / 2;
+  border-radius: $main-font-size / 4;
+  background: $main-light-color;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $main-font-size;
+
+  .complete {
+    @include notice-button;
+    border: 3px solid $main-red-color;
+    color: $main-red-color;
+  }
+  .loading {
+    @include notice-button;
+    border: 3px solid $main-blue-color;
+    color: $main-blue-color;
+  }
+  .error {
+    @include notice-button;
+    border: 3px solid $main-green-color;
+    color: $main-green-color;
+  }
+}
