@@ -1,4 +1,3 @@
-// preventDefult()
 const form = document.querySelector("form");
 const userInput = document.querySelector("#todo-item");
 const ul = document.querySelector("ul");
@@ -12,12 +11,12 @@ const save = () => {
 const delItem = (event) => {
   const target = event.target.parentElement;
   todos = todos.filter((todo) => todo.id != target.id);
-
+  save();
   target.remove();
 };
 
 const addItem = (todo) => {
-  if (todo !== "") {
+  if (todo.text !== "") {
     const li = document.createElement("li");
     const span = document.createElement("span");
     const button = document.createElement("button");
@@ -28,7 +27,7 @@ const addItem = (todo) => {
 
     li.append(span, button);
     li.id = todo.id;
-    ul.appendChild(li);
+    ul.prepend(li);
   }
 };
 
@@ -40,7 +39,9 @@ const handler = (event) => {
   };
   todos.push(todo);
   addItem(todo);
-  save();
+  if (todo.text !== "") {
+    save();
+  }
   userInput.value = "";
 };
 
@@ -55,7 +56,8 @@ const init = () => {
 };
 
 init();
-
 form.addEventListener("submit", handler);
 
-// console.log(todos);
+// localStorage.setItem("Hello", "World");
+// const myData = localStorage.getItem("Hello");
+// console.log(myData);
