@@ -1,0 +1,5 @@
+npm -v
+npm init -y
+npm i typescript -g
+tsc -v
+npm i tsx

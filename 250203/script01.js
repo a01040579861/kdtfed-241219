@@ -9,6 +9,6 @@ const showPrice = () => {
 
   document.querySelector(
     "#result"
-  ).innerText = `할인된 금액은 ${resultPrice}원 입니다!`;
+  ).innerText = `할인된 금액은 ${resultPrice}입니다!`;
 };
 button.addEventListener("click", showPrice);
