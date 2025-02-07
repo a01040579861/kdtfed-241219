@@ -1,34 +1,29 @@
-const orderBtn = document.querySelector("#order");
-const orderInfo = document.querySelector("#orderInfo");
-console.log(orderInfo);
-orderBtn.addEventListener("click", () => {
-  const newH = document.createElement("h2");
-  const title = document.querySelector(".desc > h2");
-  const textNode = document.createTextNode(title.innerText);
-
-  newH.style.fontSize = "2rem";
-  newH.style.color = "green";
-
-  const newImg = document.createElement("img");
-  const srcNode = document.createAttribute("src");
-
-  newImg.style.width = "200px";
-
-  srcNode.value =
-    "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b24c79dc-427b-4722-9e0c-2ca66c064ecf/G.T.+HUSTLE+3+EP+OLY.png";
-
-  newImg.setAttributeNode(srcNode);
-
-  newH.appendChild(textNode);
-  orderInfo.appendChild(newH);
-  orderInfo.appendChild(newImg);
-});
-
+const form = document.querySelector("form");
 const title = document.querySelector("#title");
+const author = document.querySelector("#author");
+const bookList = document.querySelector("#booklist");
 
-title.addEventListener("click", function () {
-  this.parentNode.removeChild(this);
-  // console.log(this.parentNode);
-  // this.removeChild(this);
-  // this.remove();
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (title.value === "" || author.value === "") alert("정보를 입력해주세요!");
+  else {
+    const liItem = document.createElement("li");
+    liItem.innerHTML = `${title.value} - ${author.value} <span>삭제</span>`;
+
+    bookList.appendChild(liItem);
+
+    title.value = "";
+    author.value = "";
+
+    const delButtons = document.querySelectorAll("span");
+
+    console.log(typeof delButtons);
+
+    delButtons.forEach((delButton) => {
+      delButton.addEventListener("click", function () {
+        this.parentNode.parentNode.removeChild(this.parentNode);
+      });
+    });
+  }
 });
