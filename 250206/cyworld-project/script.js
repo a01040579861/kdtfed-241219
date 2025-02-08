@@ -2,6 +2,7 @@
 const menuHome = document.querySelector("#menuHome");
 const menuGame = document.querySelector("#menuGame");
 const menuJukebox = document.querySelector("#menuJukebox");
+const menuPhoto = document.querySelector("#menuPhoto");
 const contentFrame = document.querySelector("#contentFrame");
 
 const homeChange = () => {
@@ -9,23 +10,34 @@ const homeChange = () => {
   menuHome.style = "background: #fff; color: #000";
   menuGame.style = "background: #55b2e4; color: #fff";
   menuJukebox.style = "background: #55b2e4; color: #fff";
+  menuPhoto.style = "background: #55b2e4; color: #fff";
 };
 const gameChange = () => {
   contentFrame.setAttribute("src", "./game.html");
   menuGame.style = "background: #fff; color: #000";
   menuHome.style = "background: #55b2e4; color: #fff";
   menuJukebox.style = "background: #55b2e4; color: #fff";
+  menuPhoto.style = "background: #55b2e4; color: #fff";
 };
 const jukeboxChange = () => {
   contentFrame.setAttribute("src", "./jukebox.html");
   menuJukebox.style = "background: #fff; color: #000";
   menuGame.style = "background: #55b2e4; color: #fff";
   menuHome.style = "background: #55b2e4; color: #fff";
+  menuPhoto.style = "background: #55b2e4; color: #fff";
+};
+const photoChange = () => {
+  contentFrame.setAttribute("src", "./photo.html");
+  menuPhoto.style = "background: #fff; color: #000";
+  menuGame.style = "background: #55b2e4; color: #fff";
+  menuHome.style = "background: #55b2e4; color: #fff";
+  menuJukebox.style = "background: #55b2e4; color: #fff";
 };
 
 menuHome.addEventListener("click", homeChange);
 menuGame.addEventListener("click", gameChange);
 menuJukebox.addEventListener("click", jukeboxChange);
+menuPhoto.addEventListener("click", photoChange);
 
 /* count event */
 const getFormattedDate = () => {

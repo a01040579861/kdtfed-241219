@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -33,17 +36,20 @@ html body {
 /* ==== inner-left ==== */
 #inner-left {
   width: 203px;
-  height: 472px;
+  height: 468px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 #inner-left .inner-left-header {
   width: 100%;
-  height: 30px;
-  font-size: 1.4rem;
+  height: 26px;
   display: flex;
   justify-content: center;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 3.5;
+  font-family: "Press Start 2P";
 }
 #inner-left .inner-left-header .zero {
   color: #dc143c;
@@ -51,12 +57,12 @@ html body {
 #inner-left .inner-left-body {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 7px;
   width: 100%;
   height: 100%;
-  border: 1px solid #808080;
+  border: 1px solid #000;
   border-radius: 14px;
-  padding: 26px;
+  padding: 15px;
 }
 #inner-left .inner-left-body .left-body-title {
   width: 100%;
@@ -66,43 +72,118 @@ html body {
   align-items: center;
 }
 #inner-left .inner-left-body .left-body-title .title-img {
-  width: 148px;
-  height: 133px;
+  width: 170px;
+  height: 143px;
   background: url("./contents/smile.png") center/cover no-repeat;
-}
-#inner-left .inner-left-body .left-body-title .title-line {
-  width: 100%;
-  margin: 12px 0;
-  border-top: 1px dotted #000;
+  border-radius: 8px;
 }
 #inner-left .inner-left-body .left-body-profile {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 18px;
 }
 #inner-left .inner-left-body .left-body-profile .profile-tag {
   width: 100%;
   text-align: center;
-  padding: 3px;
-  border: 1px solid #808080;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  font-size: 1.2rem;
+  padding: 4px 8px;
+  border: 2px solid #808080;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(211, 211, 211, 0.8);
+  font-size: 1rem;
+}
+#inner-left .inner-left-body .left-body-profile .profile-tag em {
+  color: #55b2e4;
+  font: 700 1rem/1 "arial";
+  text-transform: uppercase;
 }
 #inner-left .inner-left-body .left-body-profile .profile-detail {
   display: flex;
   align-items: center;
-  gap: 6px;
+  font-family: "Nanum Brush Script";
+}
+#inner-left .inner-left-body .left-body-profile .profile-detail span {
+  margin: 5px 10px 10px 10px;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#inner-left .inner-left-body .left-body-profile .profile-history {
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+#inner-left .inner-left-body .left-body-profile .profile-history span {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 2.2rem;
+}
+#inner-left .inner-left-body .left-body-profile .profile-history span .fa-caret-right {
+  width: 15px;
+  height: 15px;
+  font-size: 1rem;
+  color: #ff9a16;
   cursor: pointer;
+}
+#inner-left .inner-left-body .left-body-profile .profile-history div {
+  text-align: center;
+  padding: 2px;
+}
+#inner-left .inner-left-body .left-body-profile .profile-history div i {
+  width: 15px;
+  height: 15px;
+  font-size: 1rem;
+  color: #808080;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+#inner-left .inner-left-body .left-body-profile .profile-history div i:first-child {
+  margin-right: -5px;
+}
+#inner-left .inner-left-body .left-body-profile .profile-history div i:last-child {
+  margin-left: -5px;
+}
+#inner-left .inner-left-body .left-body-profile .profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #071878;
+  padding: 10px 4px;
 }
 #inner-left .inner-left-body .left-body-footer .footer-feel {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 #inner-left .inner-left-body .left-body-footer .footer-feel .feel-title {
   font-weight: bold;
+}
+#inner-left .inner-left-body .left-body-footer .footer-feel .friend-box {
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0px;
+}
+#inner-left .inner-left-body .left-body-footer .footer-feel .friend-box::before {
+  content: "일촌";
+  position: absolute;
+  top: -29px;
+  left: -2px;
+  padding: 2px 3.5px;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+#inner-left .inner-left-body .left-body-footer .footer-feel select {
+  width: 100%;
+  font-size: 1.4rem;
+  border-radius: 3px;
+  border: 1px solid #000;
+  background: #cfe2f3;
 }
 
 /* ==== inner-right ==== */
@@ -112,23 +193,26 @@ html body {
   padding: 0 5px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 2px;
 }
 #inner-right .inner-right-header {
   display: flex;
   justify-content: space-between;
-  color: #55b2e4;
 }
 #inner-right .inner-right-header .header-title {
-  font-weight: bold;
+  color: #55b2e4;
+  font-weight: nomal;
 }
 #inner-right .inner-right-header .header-privacy {
-  font-size: 1.4rem;
+  font-size: 1rem;
+  line-height: 2;
+  padding-right: 3px;
+  color: #808080;
 }
 #inner-right .inner-right-body {
   width: 100%;
   height: 445px;
-  border: 1px solid #808080;
+  border: 1px solid #000;
   border-radius: 14px;
   background: #fff;
 }
@@ -142,7 +226,7 @@ html body {
 /* ==== navigation ==== */
 #navigation {
   width: 70px;
-  height: 110px;
+  height: 140px;
   position: absolute;
   top: 20%;
   right: -69px;

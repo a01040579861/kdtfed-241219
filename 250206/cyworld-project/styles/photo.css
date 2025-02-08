@@ -1,0 +1,8 @@
+@import "./reset.css";
+/* common */
+html {
+  font-size: 62.5%;
+}
+html body {
+  font-size: 1.6rem;
+}

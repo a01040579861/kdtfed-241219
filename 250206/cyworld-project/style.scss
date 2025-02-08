@@ -1,6 +1,9 @@
 @import "./styles/reset.scss";
 @import "./styles/variables.scss";
 
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 /* common */
 html {
   font-size: 62.5%;
@@ -30,16 +33,20 @@ html {
 /* ==== inner-left ==== */
 #inner-left {
   width: 203px;
-  height: 472px;
+  height: 468px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
   .inner-left-header {
     width: 100%;
-    height: 30px;
-    font-size: 1.4rem;
+    height: 26px;
     display: flex;
     justify-content: center;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 3.5;
+    font-family: map-get($map: $font, $key: press-font-family);
     .zero {
       color: map-get($map: $color, $key: accent);
     }
@@ -47,12 +54,12 @@ html {
   .inner-left-body {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 7px;
     width: 100%;
     height: 100%;
-    border: 1px solid map-get($map: $color, $key: gray);
+    border: 1px solid map-get($map: $color, $key: dark);
     border-radius: 14px;
-    padding: 26px;
+    padding: 15px;
     .left-body-title {
       width: 100%;
       display: flex;
@@ -60,14 +67,10 @@ html {
       justify-content: center;
       align-items: center;
       .title-img {
-        width: 148px;
-        height: 133px;
+        width: 170px;
+        height: 143px;
         background: url("./contents/smile.png") center/cover no-repeat;
-      }
-      .title-line {
-        width: 100%;
-        margin: 12px 0;
-        border-top: 1px dotted map-get($map: $color, $key: dark);
+        border-radius: 8px;
       }
     }
     .left-body-profile {
@@ -75,29 +78,110 @@ html {
       height: 100%;
       display: flex;
       flex-direction: column;
-      gap: 18px;
       .profile-tag {
         width: 100%;
         text-align: center;
-        padding: 3px;
-        border: 1px solid map-get($map: $color, $key: gray);
-        box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.8);
-        font-size: 1.2rem;
+        padding: 4px 8px;
+        border: 2px solid map-get($map: $color, $key: gray);
+        border-radius: 4px;
+        box-shadow: 0 0 8px rgba($color: lightgray, $alpha: 0.8);
+        font-size: 1rem;
+        em {
+          color: map-get($map: $color, $key: theme);
+          font: 700 1rem/1 "arial";
+          text-transform: uppercase;
+        }
       }
       .profile-detail {
         display: flex;
         align-items: center;
-        gap: 6px;
-        cursor: pointer;
+        font-family: map-get($map: $font, $key: embed-font-family);
+        span {
+          margin: 5px 10px 10px 10px;
+          text-align: left;
+          font-size: 1.5rem;
+          line-height: 2.8rem;
+          -ms-user-select: none;
+          -moz-user-select: -moz-none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          user-select: none;
+        }
+      }
+      .profile-history {
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        span {
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          font-weight: bold;
+          line-height: 2.2rem;
+          .fa-caret-right {
+            width: 15px;
+            height: 15px;
+            font-size: 1rem;
+            color: map-get($map: $color, $key: hisBtn);
+            cursor: pointer;
+          }
+        }
+        div {
+          text-align: center;
+          padding: 2px;
+          i {
+            width: 15px;
+            height: 15px;
+            font-size: 1rem;
+            color: map-get($map: $color, $key: gray);
+            line-height: 1.5rem;
+            cursor: pointer;
+            &:first-child {
+              margin-right: -5px;
+            }
+            &:last-child {
+              margin-left: -5px;
+            }
+          }
+        }
+      }
+      .profile-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: map-get($map: $color, $key: name);
+        padding: 10px 4px;
       }
     }
     .left-body-footer {
       .footer-feel {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 5px;
         .feel-title {
           font-weight: bold;
+        }
+        .friend-box {
+          position: relative;
+          display: inline-block;
+          border-radius: 5px;
+          padding: 0px;
+        }
+        .friend-box::before {
+          content: "일촌";
+          position: absolute;
+          top: -29px;
+          left: -2px;
+          padding: 2px 3.5px;
+          font-weight: bold;
+          font-size: 1.4rem;
+        }
+        select {
+          width: 100%;
+          font-size: 1.4rem;
+          border-radius: 3px;
+          border: 1px solid #000;
+          background: map-get($map: $color, $key: select);
         }
       }
     }
@@ -111,22 +195,25 @@ html {
   padding: 0 5px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 2px;
   .inner-right-header {
     display: flex;
     justify-content: space-between;
-    color: map-get($map: $color, $key: theme);
     .header-title {
-      font-weight: bold;
+      color: map-get($map: $color, $key: theme);
+      font-weight: nomal;
     }
     .header-privacy {
-      font-size: 1.4rem;
+      font-size: 1rem;
+      line-height: 2;
+      padding-right: 3px;
+      color: map-get($map: $color, $key: gray);
     }
   }
   .inner-right-body {
     width: 100%;
     height: 445px;
-    border: 1px solid map-get($map: $color, $key: gray);
+    border: 1px solid map-get($map: $color, $key: dark);
     border-radius: 14px;
     background: map-get($map: $color, $key: light);
     iframe {
@@ -141,7 +228,7 @@ html {
 /* ==== navigation ==== */
 #navigation {
   width: 70px;
-  height: 110px;
+  height: 140px;
   position: absolute;
   top: 20%;
   right: -69px;

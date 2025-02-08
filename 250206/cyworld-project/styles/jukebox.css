@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,11 @@ html,
 body {
   width: 100%;
   height: 100%;
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 html {
@@ -26,10 +32,14 @@ html body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* 리스트 스타일 */
+  /* 리스트 아이템 */
+  /* 앨범 이미지 */
+  /* 제목 및 가수 정보 */
 }
 #wrapper #wrapper-header {
   width: 100%;
-  height: 48px;
+  height: 40px;
 }
 #wrapper #wrapper-header .contents-title {
   display: flex;
@@ -48,96 +58,64 @@ html body {
   border-top: 1px solid #808080;
   margin: 4px 0;
 }
-#wrapper #wrapper-header .albumWrapper {
-  display: flex;
-  justify-content: space-between;
-}
-#wrapper #wrapper-header .albumWrapper .album-thumbnail {
-  width: 125px;
-  height: 110px;
-}
-#wrapper #wrapper-header .albumWrapper .album-songtitle {
-  font-size: 1.2rem;
-  color: #808080;
-}
-#wrapper #wrapper-header .albumWrapper .album-artist {
-  color: #0f465e;
-  font-size: 1.4rem;
-}
-#wrapper #wrapper-body {
+#wrapper .music-container {
   width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: #fff;
+  padding: 0px;
+  box-sizing: border-box;
 }
-#wrapper #wrapper-body .contents-title {
+#wrapper .select-all-container {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-#wrapper #wrapper-body .contents-title .title {
-  color: #55b2e4;
+  margin-bottom: 10px;
+  color: #071878;
   font: bold 1.4rem/1 "arial";
+  cursor: pointer;
 }
-#wrapper #wrapper-body .contents-title .subtitle {
-  font: normal 1.4rem/1 "arial";
+#wrapper .select-all-container input {
+  width: 12px;
+  height: 12px;
+  margin: 4px;
+  cursor: pointer;
 }
-#wrapper #wrapper-body .albumTable {
-  width: 100%;
-  margin: 4px 0;
-  padding: 2px;
-  border-spacing: 0;
+#wrapper .music-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-#wrapper #wrapper-body .albumTable th {
-  background: #eee;
-  padding: 2px;
-}
-#wrapper #wrapper-body .albumTable td {
-  color: #0f465e;
-  border-bottom: 1px dashed #808080;
-  height: 26px;
-  padding-top: 4px;
-}
-#wrapper #wrapper-body .albumTable .albumTable-checkbox {
-  width: 5%;
-  text-align: center;
-}
-#wrapper #wrapper-body .albumTable .albumTable-number {
-  width: 18%;
-  text-align: center;
-}
-#wrapper #wrapper-body .albumTable-song {
-  width: 100%;
+#wrapper .music-item {
   display: flex;
-  justify-content: flex-start;
-  gap: 6px;
-  padding-left: 40px;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: all 0.3s;
 }
-#wrapper #wrapper-body .albumTable-song i {
-  display: inline-block;
-  width: 24px;
-  height: 18px;
+#wrapper .music-item:hover {
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+#wrapper .music-item > input[type=checkbox] {
+  width: 12px;
+  height: 12px;
+  margin: 4px;
+  cursor: pointer;
+}
+#wrapper .album-cover {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#wrapper .music-info {
+  cursor: pointer;
+}
+#wrapper .music-info .title {
   font-size: 1.4rem;
-  border-radius: 3px;
-  padding-left: 8px;
-  padding-top: 2px;
-  background: #55b2e4;
-  color: #fff;
-  cursor: pointer;
+  font-weight: bold;
+  color: #0a4f76;
 }
-#wrapper #wrapper-body .albumTable-artist {
-  width: 26%;
-  text-align: center;
-}
-#wrapper #wrapper-body .albumTable-footer {
-  display: flex;
-  justify-content: space-between;
-}
-#wrapper #wrapper-body .albumTable-footer button {
-  background: #808080;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 3px 5px;
-  cursor: pointer;
-}
-#wrapper #wrapper-body .albumTable-footer .footer-center {
-  color: #dc143c;
+#wrapper .music-info .artist {
+  font-size: 1.2rem;
+  color: #555;
 }
