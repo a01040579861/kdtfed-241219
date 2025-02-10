@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
@@ -155,35 +154,45 @@ html body {
   color: #071878;
   padding: 10px 4px;
 }
-#inner-left .inner-left-body .left-body-footer .footer-feel {
+#inner-left .inner-left-body .left-body-footer {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-}
-#inner-left .inner-left-body .left-body-footer .footer-feel .feel-title {
-  font-weight: bold;
-}
-#inner-left .inner-left-body .left-body-footer .footer-feel .friend-box {
-  position: relative;
-  display: inline-block;
+  align-items: center;
+  padding: 8px;
+  background: #f3f3f3;
   border-radius: 5px;
-  padding: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-#inner-left .inner-left-body .left-body-footer .footer-feel .friend-box::before {
-  content: "일촌";
-  position: absolute;
-  top: -29px;
-  left: -2px;
-  padding: 2px 3.5px;
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-#inner-left .inner-left-body .left-body-footer .footer-feel select {
+#inner-left .inner-left-body .left-body-footer .music-controller {
   width: 100%;
-  font-size: 1.4rem;
-  border-radius: 3px;
-  border: 1px solid #000;
-  background: #cfe2f3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#inner-left .inner-left-body .left-body-footer .music-controller .control-btn {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+#inner-left .inner-left-body .left-body-footer .music-controller .progress-bar {
+  width: 60px;
+  height: 5px;
+  background: #ff5722;
+  position: relative;
+  cursor: pointer;
+}
+#inner-left .inner-left-body .left-body-footer .music-controller .progress-bar .progress {
+  width: 0%;
+  height: 100%;
+  background: #f3f3f3;
+}
+#inner-left .inner-left-body .left-body-footer .music-controller .volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#inner-left .inner-left-body .left-body-footer .music-controller .volume-control input {
+  width: 60px;
 }
 
 /* ==== inner-right ==== */

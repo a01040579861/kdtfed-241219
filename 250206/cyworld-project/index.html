@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,16 +57,24 @@
                 </div>
               </div>
               <div class="left-body-footer">
-                <div class="footer-feel">
-                  <div class="friend-box">
-                    <select id="fdSelect">
-                      <option value="#">★일촌 파도타기</option>
-                      <option value="#">★이싸이</option>
-                      <option value="#">★김싸이</option>
-                      <option value="#">★박월드</option>
-                    </select>
+                <div class="music-controller">
+                  <i class="fas fa-step-backward control-btn" id="prev"></i>
+                  <i class="fas fa-play control-btn" id="play"></i>
+                  <i class="fas fa-step-forward control-btn" id="next"></i>
+                  <div class="volume-control">
+                    <i class="fas fa-volume-up"></i>
+                    <input
+                      type="range"
+                      id="volume"
+                      min="0"
+                      max="1"
+                      step="0.1"
+                      value="1"
+                    />
                   </div>
                 </div>
+
+                <audio id="audioPlayer" src="./contents/change.mp3"></audio>
               </div>
             </div>
           </section>
@@ -78,7 +86,7 @@
               </div>
             </div>
             <div class="inner-right-body">
-              <iframe id="contentFrame" src="./jukebox.html"></iframe>
+              <iframe id="contentFrame" src="./home.html"></iframe>
             </div>
           </section>
           <section id="navigation">

@@ -1,60 +1,74 @@
-/* music click event */
-let currentAudio = null; // 현재 재생 중인 오디오 저장
+const totalCheck = document.querySelector("#total");
+const checkboxes = document.querySelectorAll(".albumTable-checkbox input");
+const songs = document.querySelectorAll(".albumTable-song");
+const listenButton = document.querySelector(".footer-left button");
 
-document.querySelectorAll(".music-item").forEach((item) => {
-  item.addEventListener("click", function () {
-    let audio = this.querySelector("audio"); // 해당 리스트의 오디오 가져오기
+let currentAudio = null;
+let selectedSongs = [];
 
-    if (currentAudio && currentAudio !== audio) {
-      currentAudio.pause(); // 기존 재생 중인 노래 멈춤
-      currentAudio.currentTime = 0; // 처음부터 다시 시작하도록 설정
-    }
+// 전체 선택 체크박스 기능
+totalCheck.addEventListener("change", () => {
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = totalCheck.checked;
+  });
+});
 
-    if (audio.paused) {
-      audio.play();
-      currentAudio = audio; // 현재 재생 중인 오디오 업데이트
+// 기존 재생 중인 오디오 정지 함수
+const stopCurrentAudio = () => {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
+};
+
+// 개별 재생 기능
+songs.forEach((song) => {
+  const playBtn = song.querySelector(".fa-caret-right");
+
+  playBtn.addEventListener("click", (e) => {
+    const audio = e.target.closest("td").querySelector("audio");
+
+    if (currentAudio === audio) {
+      // 이미 재생 중인 경우 -> 일시정지
+      if (!audio.paused) {
+        audio.pause();
+        return;
+      }
     } else {
-      audio.pause();
-      currentAudio = null; // 멈추면 현재 오디오 해제
+      // 다른 오디오가 재생 중이면 정지 후 새로운 오디오 재생
+      stopCurrentAudio();
     }
+
+    audio.play();
+    currentAudio = audio;
   });
 });
 
-/* check box all */
-document.addEventListener("DOMContentLoaded", () => {
-  const selectAllCheckbox = document.querySelector("#select-all");
-  const songCheckboxes = document.querySelectorAll(".song-checkbox");
+// 전체 선택된 곡을 순차적으로 재생
+const playSelectedSongs = () => {
+  selectedSongs = [...checkboxes]
+    .filter((checkbox) => checkbox.checked && checkbox !== totalCheck)
+    .map((checkbox) => checkbox.closest("tr").querySelector("audio"));
 
-  selectAllCheckbox?.addEventListener("change", (event) => {
-    songCheckboxes.forEach((checkbox) => {
-      checkbox.checked = event.target.checked;
-    });
-  });
-});
+  if (selectedSongs.length === 0) return;
 
-// const songs = document.querySelectorAll(".albumTable-song");
-// let currentAudio = null;
+  stopCurrentAudio(); // 기존 재생 정지
 
-// songs.forEach((song) => {
-//   const playBtn = song.querySelector(".fa-caret-right");
-//   const pauseBtn = song.querySelector(".fa-pause");
+  let i = 0;
 
-//   playBtn.addEventListener("click", (e) => {
-//     const audio = e.target.closest("td").querySelector("audio");
+  const playNextSong = () => {
+    if (i < selectedSongs.length) {
+      currentAudio = selectedSongs[i];
+      currentAudio.play();
+      i++;
 
-//     if (currentAudio && currentAudio !== audio) {
-//       currentAudio.pause();
-//     }
-//     audio.play();
-//     currentAudio = audio;
-//   });
+      // 현재 곡이 끝나면 다음 곡 재생
+      currentAudio.onended = playNextSong;
+    }
+  };
 
-//   pauseBtn.addEventListener("click", (e) => {
-//     const audio = e.target.closest("td").querySelector("audio");
-//     audio.pause();
+  playNextSong();
+};
 
-//     if (currentAudio === audio) {
-//       currentAudio = null;
-//     }
-//   });
-// });
+// 듣기 버튼 클릭 시 전체 선택된 곡 순차 재생
+listenButton.addEventListener("click", playSelectedSongs);

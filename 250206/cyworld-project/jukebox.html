@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,154 +17,177 @@
     <main id="wrapper">
       <section id="wrapper-header">
         <div class="contents-title">
-          <div class="title">
-            음악口ざ○l.. ㄴrㄹΓøłlnㅓ 허락㈛는 유일ㅎŁ ㅁト약
-          </div>
+          <div class="title">추억의 BGM</div>
+          <div class="subtitle"></div>
         </div>
         <div class="header-line"></div>
       </section>
-      <div class="music-container">
-        <div class="select-all-container">
-          <input type="checkbox" id="select-all" />
-          <label for="select-all">전체 선택</label>
+      <section id="wrapper-body">
+        <table class="albumTable">
+          <tr>
+            <th class="albumTable-checkbox">
+              <input id="total" type="checkbox" name="total" />
+            </th>
+            <th class="albumTable-number">번호</th>
+            <th class="albumTable-cover">곡명</th>
+            <th class="albumTable-artist">아티스트</th>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check01" type="checkbox" name="check01" />
+            </td>
+            <td class="albumTable-number">1</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>고칠게</span>
+              <audio src="./contents/change.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">진원</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check02" type="checkbox" name="check02" />
+            </td>
+            <td class="albumTable-number">2</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>좋은사람</span>
+              <audio src="./contents/goodperson.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">박효신</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check03" type="checkbox" name="check03" />
+            </td>
+            <td class="albumTable-number">3</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>눈의꽃</span>
+              <audio src="./contents/flower.mp4"></audio>
+            </td>
+            <td class="albumTable-artist">박효신</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check04" type="checkbox" name="check04" />
+            </td>
+            <td class="albumTable-number">4</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>벌써 1년..</span>
+              <audio src="./contents/1year.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">브라운 아이즈</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check05" type="checkbox" name="check05" />
+            </td>
+            <td class="albumTable-number">5</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>늦은 후회</span>
+              <audio src="./contents/bobo.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">보보</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check05" type="checkbox" name="check05" />
+            </td>
+            <td class="albumTable-number">6</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>삭제</span>
+              <audio src="./contents/delete.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">이승기</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check05" type="checkbox" name="check05" />
+            </td>
+            <td class="albumTable-number">7</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>응급실</span>
+              <audio src="./contents/emergency.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">izi</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check05" type="checkbox" name="check05" />
+            </td>
+            <td class="albumTable-number">8</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>나였으면</span>
+              <audio src="./contents/wereme.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">나윤권</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check05" type="checkbox" name="check05" />
+            </td>
+            <td class="albumTable-number">9</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>내게 오는 길</span>
+              <audio src="./contents/sungsikyung.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">성시경</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check05" type="checkbox" name="check05" />
+            </td>
+            <td class="albumTable-number">10</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>다시 와주라</span>
+              <audio src="./contents/bobo.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">바이브(VIBE)</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check05" type="checkbox" name="check05" />
+            </td>
+            <td class="albumTable-number">11</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>I love you</span>
+              <audio src="./contents/iloveyou.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">포지션</td>
+          </tr>
+          <tr>
+            <td class="albumTable-checkbox">
+              <input id="check05" type="checkbox" name="check05" />
+            </td>
+            <td class="albumTable-number">12</td>
+            <td class="albumTable-song">
+              <i class="fas fa-caret-right playing"></i>
+              <span>오늘 서울은 하루종일 맑음</span>
+              <audio src="./contents/iucidity.mp3"></audio>
+            </td>
+            <td class="albumTable-artist">윤하</td>
+          </tr>
+        </table>
+        <div class="albumTable-footer">
+          <div class="footer-left">
+            <button>듣기</button>
+          </div>
+          <div class="footer-center">| <span>1</span> |</div>
+          <div class="footer-right">
+            <button>이동</button>
+            <button>배경음악 등록</button>
+          </div>
         </div>
-        <ul class="music-list">
-          <li class="music-item">
-            <input type="checkbox" class="song-checkbox" />
-            <img class="album-cover" src="./contents/jinwon.png" alt="jinwon" />
-            <div class="music-info">
-              <div class="title">고칠게</div>
-              <div class="artist">진원</div>
-              <audio>
-                <source src="./contents/change.mp3" type="audio/mpeg" />
-              </audio>
-            </div>
-          </li>
-          <li class="music-item">
-            <input type="checkbox" class="song-checkbox" />
-            <img
-              class="album-cover"
-              src="./contents/hyoshin.png"
-              alt="hyoshin"
-            />
-            <div class="music-info">
-              <div class="title">좋은사람</div>
-              <div class="artist">박효신</div>
-            </div>
-            <audio>
-              <source src="./contents/goodperson.mp3" type="audio/mpeg" />
-            </audio>
-          </li>
-          <li class="music-item">
-            <input type="checkbox" class="song-checkbox" />
-            <img class="album-cover" src="./contents/vibe.png" alt="vibe" />
-            <div class="music-info">
-              <div class="title">다시 와주라</div>
-              <div class="artist">바이브(VIBE)</div>
-            </div>
-            <audio>
-              <source src="./contents/vibe.mp3" type="audio/mpeg" />
-            </audio>
-          </li>
-          <li class="music-item">
-            <input type="checkbox" class="song-checkbox" />
-            <img
-              class="album-cover"
-              src="./contents/sikyung.png"
-              alt="sikyung"
-            />
-            <div class="music-info">
-              <div class="title">내게 오는 길</div>
-              <div class="artist">성시경</div>
-            </div>
-            <audio>
-              <source src="./contents/sungsikyung.mp3" type="audio/mpeg" />
-            </audio>
-          </li>
-          <li class="music-item">
-            <input type="checkbox" class="song-checkbox" />
-            <img
-              class="album-cover"
-              src="./contents/browneyes.png"
-              alt="browneyes"
-            />
-            <div class="music-info">
-              <div class="title">벌써 1년..</div>
-              <div class="artist">브라운 아이즈</div>
-            </div>
-            <audio>
-              <source src="./contents/1year.mp3" type="audio/mpeg" />
-            </audio>
-          </li>
-          <li class="music-item">
-            <input type="checkbox" class="song-checkbox" />
-            <img
-              class="album-cover"
-              src="./contents/position.png"
-              alt="position"
-            />
-            <div class="music-info">
-              <div class="title">I love you</div>
-              <div class="artist">포지션</div>
-            </div>
-            <audio>
-              <source src="./contents/iloveyou.mp3" type="audio/mpeg" />
-            </audio>
-          </li>
-          <li class="music-item">
-            <input type="checkbox" class="song-checkbox" />
-            <img class="album-cover" src="./contents/bobo.png" alt="bobo" />
-            <div class="music-info">
-              <div class="title">늦은 후회</div>
-              <div class="artist">보보</div>
-            </div>
-            <audio>
-              <source src="./contents/bobo.mp3" type="audio/mpeg" />
-            </audio>
-          </li>
-          <li class="music-item">
-            <input type="checkbox" class="song-checkbox" />
-            <img
-              class="album-cover"
-              src="./contents/seunggi.png"
-              alt="seunggi"
-            />
-            <div class="music-info">
-              <div class="title">삭제</div>
-              <div class="artist">이승기</div>
-            </div>
-            <audio>
-              <source src="./contents/delete.mp3" type="audio/mpeg" />
-            </audio>
-          </li>
-          <li class="music-item">
-            <input type="checkbox" class="song-checkbox" />
-            <img class="album-cover" src="./contents/izi.png" alt="izi" />
-            <div class="music-info">
-              <div class="title">응급실</div>
-              <div class="artist">izi</div>
-            </div>
-            <audio>
-              <source src="./contents/emergency.mp3" type="audio/mpeg" />
-            </audio>
-          </li>
-          <li class="music-item">
-            <input type="checkbox" class="song-checkbox" />
-            <img
-              class="album-cover"
-              src="./contents/yunkwon.png"
-              alt="yunkwon"
-            />
-            <div class="music-info">
-              <div class="title">나였으면</div>
-              <div class="artist">나윤권</div>
-            </div>
-            <audio>
-              <source src="./contents/wereme.mp3" type="audio/mpeg" />
-            </audio>
-          </li>
-        </ul>
-      </div>
+      </section>
     </main>
   </body>
 </html>

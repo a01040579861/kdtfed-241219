@@ -24,11 +24,6 @@ body {
   height: 100%;
 }
 
-ul,
-li {
-  list-style: none;
-}
-
 html {
   font-size: 62.5%;
   body {
@@ -45,7 +40,7 @@ html {
   justify-content: space-between;
   #wrapper-header {
     width: 100%;
-    height: 40px;
+    height: 20px;
     @include innerContents;
     .header-line {
       width: 100%;
@@ -53,78 +48,75 @@ html {
       margin: 4px 0;
     }
   }
-
-  .music-container {
+  #wrapper-body {
     width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    background: map-get($map: $color, $key: light);
-    padding: 0px;
-    box-sizing: border-box;
-  }
-
-  .select-all-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    color: map-get($map: $color, $key: name);
-    font: bold 1.4rem/1 "arial";
-    cursor: pointer;
-  }
-
-  .select-all-container input {
-    width: 12px;
-    height: 12px;
-    margin: 4px;
-    cursor: pointer;
-  }
-
-  /* 리스트 스타일 */
-  .music-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  /* 리스트 아이템 */
-  .music-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    transition: all 0.3s;
-    &:hover {
-      box-shadow: 0 3px 0 0 rgba($color: #000000, $alpha: 0.1);
+    @include innerContents;
+    .albumTable {
+      width: 100%;
+      margin: 4px 0;
+      padding: 2px;
+      border-spacing: 0;
+      th {
+        background: map-get($map: $color, $key: table);
+        padding: 2px;
+        font-size: 1.4rem;
+      }
+      td {
+        color: map-get($map: $color, $key: artist);
+        border-bottom: 1px dashed map-get($map: $color, $key: gray);
+        height: 26px;
+        padding-top: 2px;
+        font-size: 1.2rem;
+      }
+      .albumTable-checkbox {
+        width: 5%;
+        text-align: center;
+      }
+      .albumTable-number {
+        width: 18%;
+        text-align: center;
+      }
+      .albumTable-song {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 6px;
+        padding-left: 40px;
+        align-items: center;
+        i {
+          display: inline-block;
+          width: 17px;
+          height: 18px;
+          font-size: 1.3rem;
+          border-radius: 3px;
+          padding-left: 4px;
+          padding-top: 2px;
+          border: 1px solid map-get($map: $color, $key: gray);
+          background: map-get($map: $color, $key: light);
+          color: map-get($map: $color, $key: hisBtn);
+          cursor: pointer;
+        }
+      }
+      .albumTable-artist {
+        width: 26%;
+        text-align: center;
+      }
     }
-    & > input[type="checkbox"] {
-      width: 12px;
-      height: 12px;
-      margin: 4px;
-      cursor: pointer;
-    }
-  }
-
-  /* 앨범 이미지 */
-  .album-cover {
-    width: 60px;
-    height: 60px;
-    border-radius: 5px;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-
-  /* 제목 및 가수 정보 */
-  .music-info {
-    cursor: pointer;
-
-    .title {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: map-get($map: $color, $key: music-name);
-    }
-
-    .artist {
-      font-size: 1.2rem;
-      color: map-get($map: $color, $key: music-artist);
+    .albumTable-footer {
+      display: flex;
+      justify-content: space-between;
+      button {
+        background: map-get($map: $color, $key: gray);
+        color: map-get($map: $color, $key: light);
+        border: none;
+        border-radius: 6px;
+        padding: 3px 5px;
+        cursor: pointer;
+      }
+      .footer-center {
+        color: map-get($map: $color, $key: accent);
+        cursor: pointer;
+      }
     }
   }
 }

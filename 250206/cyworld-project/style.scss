@@ -154,34 +154,48 @@ html {
       }
     }
     .left-body-footer {
-      .footer-feel {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
+      background: map-get($map: $color, $key: footerBg);
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+      .music-controller {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        gap: 5px;
-        .feel-title {
-          font-weight: bold;
+        align-items: center;
+        gap: 10px;
+
+        .control-btn {
+          font-size: 1.6rem;
+          cursor: pointer;
         }
-        .friend-box {
+
+        .progress-bar {
+          width: 60px;
+          height: 5px;
+          background: map-get($map: $color, $key: progress);
           position: relative;
-          display: inline-block;
-          border-radius: 5px;
-          padding: 0px;
+          cursor: pointer;
+
+          .progress {
+            width: 0%;
+            height: 100%;
+            background: map-get($map: $color, $key: footerBg);
+          }
         }
-        .friend-box::before {
-          content: "일촌";
-          position: absolute;
-          top: -29px;
-          left: -2px;
-          padding: 2px 3.5px;
-          font-weight: bold;
-          font-size: 1.4rem;
-        }
-        select {
-          width: 100%;
-          font-size: 1.4rem;
-          border-radius: 3px;
-          border: 1px solid #000;
-          background: map-get($map: $color, $key: select);
+
+        .volume-control {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          input {
+            width: 60px;
+          }
         }
       }
     }
