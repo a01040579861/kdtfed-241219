@@ -27,7 +27,7 @@ figure {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background-image: linear-gradient(black, pink, black);
+  background: url("https://d2phebdq64jyfk.cloudfront.net/media/article/99bd8bc21b6640918ed8c6b4f9308120.jpeg");
 }
 figure > h1 {
   position: absolute;
@@ -302,5 +302,52 @@ figure .btnNext::after {
   }
   100% {
     transform: translateY(10%) rotate(360deg);
+  }
+}
+.loading {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+.loading span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: gray;
+  animation: loading 1.5s linear infinite;
+}
+.loading span:nth-child(1) {
+  background: crimson;
+}
+.loading span:nth-child(2) {
+  background: dodgerblue;
+  animation-duration: 0.8s;
+}
+
+@keyframes loading {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 10px);
+  }
+  50% {
+    top: calc(100% - 10px);
+    left: calc(100% - 10px);
+  }
+  75% {
+    top: calc(100% - 10px);
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
   }
 }

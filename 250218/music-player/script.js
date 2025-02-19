@@ -1,9 +1,25 @@
+import { API_UNSPLASH_KEY } from "./env.js";
+
+const getImg = `https://api.unsplash.com/photos/random?client_id=${API_UNSPLASH_KEY}`;
+
+const figure = document.querySelector("figure");
+const loading = document.querySelector(".loading");
+
+fetch(getImg)
+  .then((response) => response.json())
+  .then(({ urls: { full } }) => {
+    figure.style.backgroundImage = `url(${full})`;
+    loading.style.display = "none";
+  })
+  .catch((error) => {
+    console.error("이미지 로드 중 오류 발생!", error);
+  });
+
 const frame = document.querySelector("section");
 const lists = frame.querySelectorAll("article");
 const audios = frame.querySelectorAll("audio");
 const prev = document.querySelector(".btnPrev");
 const next = document.querySelector(".btnNext");
-// console.log(prev, next);
 
 // article rotation
 const deg = 45;
@@ -19,38 +35,64 @@ lists.forEach((list) => {
   i++;
 
   play.addEventListener("click", (e) => {
-    e.currentTarget
+    const isActive = e.currentTarget
       .closest("article")
-      .querySelector(".pic")
-      .classList.add("on");
+      .classList.contains("on");
 
-    e.currentTarget.closest("article").querySelector("audio").play();
+    if (isActive) {
+      const activePic = e.currentTarget
+        .closest("article")
+        .querySelector(".pic");
+
+      const activeAudio = e.currentTarget
+        .closest("article")
+        .querySelector("audio");
+
+      activePic.classList.add("on");
+      activeAudio.play();
+
+      activeAudio.addEventListener("ended", () => {
+        activePic.classList.remove("on");
+      });
+    }
   });
 
   pause.addEventListener("click", (e) => {
-    e.currentTarget
+    const isActive = e.currentTarget
       .closest("article")
-      .querySelector(".pic")
-      .classList.remove("on");
+      .classList.contains("on");
 
-    e.currentTarget.closest("article").querySelector("audio").pause();
+    if (isActive) {
+      e.currentTarget
+        .closest("article")
+        .querySelector(".pic")
+        .classList.remove("on");
+
+      e.currentTarget.closest("article").querySelector("audio").pause();
+    }
   });
 
   load.addEventListener("click", (e) => {
-    e.currentTarget
+    const isActive = e.currentTarget
       .closest("article")
-      .querySelector(".pic")
-      .classList.add("on");
+      .classList.contains("on");
 
-    e.currentTarget.closest("article").querySelector("audio").load();
-    e.currentTarget.closest("article").querySelector("audio").play();
+    if (isActive) {
+      e.currentTarget
+        .closest("article")
+        .querySelector(".pic")
+        .classList.add("on");
+
+      e.currentTarget.closest("article").querySelector("audio").load();
+      e.currentTarget.closest("article").querySelector("audio").play();
+    }
   });
 });
 
 // button event
 let num = 0;
 let active = 0;
-const lan = lists.length - 1;
+const len = lists.length - 1;
 
 const activation = (index, lists) => {
   lists.forEach((list) => {
@@ -63,7 +105,7 @@ const initMusic = () => {
   audios.forEach((audio) => {
     audio.pause();
     audio.load();
-    audio.parentElement.previousElementSibling.remove("on");
+    audio.parentElement.previousElementSibling.classList.remove("on");
   });
 };
 
@@ -84,3 +126,18 @@ next.addEventListener("click", () => {
   active === len ? (active = 0) : active++;
   activation(active, lists);
 });
+
+// loading
+let degree = 0;
+
+const loop = () => {
+  const rotation = degree * (Math.PI / 180);
+  const targetX = window.innerWidth / 2 - 50 + 100 * Math.cos(rotation);
+  const targetY = window.innerHeight / 2 - 50 + 100 * Math.sin(rotation);
+
+  loading.style.left = `${targetX}px`;
+  loading.style.top = `${targetY}px`;
+  degree += 1;
+};
+
+loop();
