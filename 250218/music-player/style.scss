@@ -27,6 +27,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  background: url("./img/music_view10.gif") center / cover no-repeat;
 }
 
 figure {
@@ -34,7 +35,7 @@ figure {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background: url("https://d2phebdq64jyfk.cloudfront.net/media/article/99bd8bc21b6640918ed8c6b4f9308120.jpeg");
+
   & > h1 {
     position: absolute;
     top: 7vh;

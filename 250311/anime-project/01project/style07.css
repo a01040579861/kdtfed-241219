@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+svg {
+  width: 1024px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+svg.svg2 {
+  transform: translate(-49%, -49%);
+  fill: #ff9500;
+}
+svg.svg1 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  transform: translate(-48.4%, -48.4%);
+}
