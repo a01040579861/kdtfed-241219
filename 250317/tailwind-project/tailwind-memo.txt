@@ -1,0 +1,8 @@
+테일윈드
+https://v3.tailwindcss.com/ 
+v3.4.17
+reset.css 필요없음!
+
+web-gradients
+flat ui colors
+color hunt
