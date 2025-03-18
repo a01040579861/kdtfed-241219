@@ -1,0 +1,2 @@
+npm i styled-reset : 스타일컴포넌트 사용시 reset css 선언 안해도 가능
+
