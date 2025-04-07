@@ -1,10 +1,7 @@
 @import "./styles/reset.scss";
 @import "./styles/variables.scss";
 
-.btn,
-body .checkout,
-body .add,
-body .order {
+.btn {
   width: 200px;
   height: 100%;
   padding: 7px;
@@ -25,14 +22,17 @@ body {
   font-size: $main-font-size;
 
   .order {
+    @extend .btn;
     background: $main-red-color;
     color: $main-light-color;
   }
   .add {
+    @extend .btn;
     background: $main-blue-color;
     color: $main-light-color;
   }
   .checkout {
+    @extend .btn;
     background: $main-green-color;
     color: $main-light-color;
   }

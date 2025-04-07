@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,34 +14,36 @@
         id="email"
         class="inputBox"
         type="email"
-        placeholder="이메일을 입력하세요."
+        placeholder="이메일을 입력해주세요."
       />
       <div id="error-email" class="error"></div>
       <input
         id="writer"
         class="inputBox"
         type="text"
-        placeholder="이름을 입력하세요."
+        placeholder="이름을 입력해주세요."
       />
       <div id="error-writer" class="error"></div>
       <input
         id="password1"
         class="inputBox"
         type="password"
-        placeholder="비밀번호를 입력하세요."
+        placeholder="비밀번호를 입력해주세요."
       />
       <div id="error-password1" class="error"></div>
       <input
         id="password2"
         class="inputBox"
         type="password"
-        placeholder="비밀번호를 다시 입력하세요."
+        placeholder="비밀번호를 다시 입력해주세요."
       />
       <div id="error-password2" class="error"></div>
       <div class="phone-wrapper">
-        <input id="phone1" type="text" class="phoneNum" />-
-        <input id="phone2" type="text" class="phoneNum" />-
-        <input id="phone3" type="text" class="phoneNum" />
+        <input id="phone1" class="phoneNum" type="text" />
+        -
+        <input id="phone2" class="phoneNum" type="text" />
+        -
+        <input id="phone3" class="phoneNum" type="text" />
       </div>
       <div class="token-wrapper">
         <div id="token" class="token">000000</div>
@@ -83,7 +85,7 @@
       <div id="error-gender" class="error"></div>
       <hr />
       <div class="footer">
-        <button id="signup-button">가입하기</button>
+        <button id="signup-button" disabled>가입하기</button>
       </div>
     </form>
   </body>

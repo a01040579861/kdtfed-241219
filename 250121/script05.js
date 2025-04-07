@@ -1,21 +1,31 @@
 // for (let i = 1; i <= 10; i++) {
 //   if (i === 6) break;
-//   document.write(i, "<br />");
+//   document.write(i, "<br/>");
 // }
 
-// for (let i = 0; i <= 10; i++) {
+// for (let i = 1; i <= 10; i++) {
 //   if (i % 2 === 0) continue;
-//   document.write(i, "<br />");
+//   document.write(i, "<br/>");
 // }
 
 // for (let i = 1; i <= 3; i++) {
-//   for (let j = 1; j <= 2; j++) {
-//     document.write(`${i}행 ${j}열`, "<br />");
+//   for (let k = 1; k <= 2; k++) {
+//     document.write(`${i}행 ${k}열`, "<br/>");
 //   }
-//   document.write("<br />");
+//   document.write("<br/>");
 // }
 
+// for()
+// forEach()
+
 const marvels = ["ironman", "hulk", "captin", "stranger"];
+
+// for (let i = 0; i < marvels.length; i++) {
+//   console.log(marvels[i]);
+// }
+
+// 콜백 = call back 함수
+
 marvels.forEach(function (marvel, index, array) {
   console.log(marvel, index, array);
 });

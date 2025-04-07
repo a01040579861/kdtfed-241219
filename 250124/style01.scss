@@ -1,14 +1,27 @@
 @import "./styles/reset.scss";
 @import "./styles/variables.scss";
 
-// 공통스타일
 @mixin notice-button {
   width: 150px;
+  height: 100%;
   padding: $main-font-size / 2;
   border-radius: $main-font-size / 4;
   background: $main-light-color;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
+
+  &.complete:hover {
+    background: $main-red-color;
+    color: $main-light-color;
+  }
+  &.loading:hover {
+    background: $main-blue-color;
+    color: $main-light-color;
+  }
+  &.error:hover {
+    background: $main-green-color;
+    color: $main-light-color;
+  }
 }
 
 html {
@@ -30,11 +43,13 @@ body {
     border: 3px solid $main-red-color;
     color: $main-red-color;
   }
+
   .loading {
     @include notice-button;
     border: 3px solid $main-blue-color;
     color: $main-blue-color;
   }
+
   .error {
     @include notice-button;
     border: 3px solid $main-green-color;

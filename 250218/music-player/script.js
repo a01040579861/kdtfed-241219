@@ -1,19 +1,18 @@
-// import { API_UNSPLASH_KEY } from "./env.js";
+import { API_UNSPLASH_KEY } from "./env.js";
 
-// const getImg = `https://api.unsplash.com/photos/random?client_id=${API_UNSPLASH_KEY}`;
+const getImg = `https://api.unsplash.com/photos/random/?client_id=${API_UNSPLASH_KEY}`;
+const figure = document.querySelector("figure");
+const loading = document.querySelector(".loading");
 
-// const figure = document.querySelector("figure");
-// const loading = document.querySelector(".loading");
-
-// fetch(getImg)
-//   .then((response) => response.json())
-//   .then(({ urls: { full } }) => {
-//     figure.style.backgroundImage = `url(${full})`;
-//     loading.style.display = "none";
-//   })
-//   .catch((error) => {
-//     console.error("이미지 로드 중 오류 발생!", error);
-//   });
+fetch(getImg)
+  .then((response) => response.json())
+  .then(({ urls: { full } }) => {
+    figure.style.backgroundImage = `url(${full})`;
+    loading.style.display = "none";
+  })
+  .catch((error) => {
+    console.error("이미지 로드 중 오류 발생!", error);
+  });
 
 const frame = document.querySelector("section");
 const lists = frame.querySelectorAll("article");

@@ -5,7 +5,6 @@ const token_timer_confirm_button = document.querySelector(
 );
 
 let interval;
-
 token_timer_confirm_button.addEventListener("click", (e) => {
   e.preventDefault();
   clearInterval(interval);
@@ -19,6 +18,8 @@ token_timer_confirm_button.addEventListener("click", (e) => {
 
   document.querySelector("#token-timer-confirm-button").innerText = "인증완료";
 
+  document.querySelector("#token-timer").innerText = "03:00";
+
   alert("인증이 완료되었습니다.");
 
   document.querySelector("#signup-button").style =
@@ -26,8 +27,12 @@ token_timer_confirm_button.addEventListener("click", (e) => {
   document.querySelector("#signup-button").removeAttribute("disabled");
 });
 
-const getTokenTimer = () => {
-  let timer = 10;
+const getTokenTimer = (e) => {
+  e.preventDefault();
+  // 1초 = 1000밀리초
+  // 1분 = 1000 * 60
+
+  let timer = 180;
   interval = setInterval(() => {
     if (timer >= 0) {
       const minutes = Math.floor(timer / 60);
@@ -65,7 +70,6 @@ const signup = (e) => {
   const genderWoman = document.querySelector("#gender-woman").checked;
   const genderMan = document.querySelector("#gender-man").checked;
 
-  // 이메일 유효성 검사
   let isValid = true;
 
   if (email.includes("@") === false) {
@@ -76,63 +80,60 @@ const signup = (e) => {
     document.querySelector("#error-email").innerText = "";
   }
 
-  // 사용자 이름 유효성 검사
   if (writer === "") {
     document.querySelector("#error-writer").innerText =
       "이름이 올바르지 않습니다.";
+    isValid = false;
   } else {
     document.querySelector("#error-writer").innerText = "";
   }
 
-  // 비밀번호 유효성 검사
   if (password1 === "") {
     document.querySelector("#error-password1").innerText =
-      "비밀번호를 입력해주세요!";
+      "비밀번호를 입력해주세요.";
     isValid = false;
   } else {
     document.querySelector("#error-password1").innerText = "";
   }
 
-  // 비밀번호 확인 유효성 검사
   if (password1 !== password2) {
+    document.querySelector("#error-password1").innerText =
+      "비밀번호가 일치하지 않습니다";
     document.querySelector("#error-password2").innerText =
-      "비밀번호가 일치하지 않습니다!";
-    document.querySelector("#error-password2").innerText =
-      "비밀번호가 일치하지 않습니다.";
+      "비밀번호가 일치하지 않습니다";
     isValid = false;
   }
 
-  // 지역 유효성 검사
   if (
     location !== "seoul" &&
     location !== "gyeongi" &&
     location !== "incheon"
   ) {
-    document.querySelector("#error-location").innerText = "지역을 선택하세요.";
+    document.querySelector("#error-location").innerText =
+      "지역을 선택해주세요.";
     isValid = false;
   } else {
     document.querySelector("#error-location").innerText = "";
   }
 
-  // 성별 유효성 검사
   if (genderWoman === false && genderMan === false) {
-    document.querySelector("#error-gender").innerText = "성별을 선택하세요.";
+    document.querySelector("#error-gender").innerText = "성별을 선택해주세요.";
     isValid = false;
   } else {
     document.querySelector("#error-gender").innerText = "";
   }
 
   if (isValid === true) {
-    alert("이젠아카데미 가입을 축하합니다!🎉🎊");
+    alert("이젠아카데미 가입을 축하합니다.");
   }
 };
 
 signup_button.addEventListener("click", signup);
 
-// 핸드폰번호 keyup e
 const phone1 = document.querySelector("#phone1");
 const phone2 = document.querySelector("#phone2");
 const phone3 = document.querySelector("#phone3");
+
 phone1.addEventListener("keyup", () => {
   const phone1Value = phone1.value;
   if (phone1Value.length === 3) {
@@ -159,22 +160,22 @@ phone3.addEventListener("keyup", () => {
   }
 });
 
-// 인증번호 전송 event
 token_button.addEventListener("click", (e) => {
   e.preventDefault();
   const token = String(Math.floor(Math.random() * 1000000)).padStart(6, "0");
   document.querySelector("#token").innerText = token;
 
-  document.querySelector("#token-button").style = "background: #fff;";
+  document.querySelector("#token-button").style =
+    "background:#fff; cursor:pointer;";
 
   document.querySelector("#token-button").setAttribute("disabled", true);
 
   document.querySelector("#token-timer-confirm-button").style =
-    "background: #0068ff; color: #fff; cursor: pointer;";
+    "background:#0068ff; color:#fff; cursor:pointer;";
 
   document
     .querySelector("#token-timer-confirm-button")
     .removeAttribute("disabled");
 
-  getTokenTimer();
+  getTokenTimer(e);
 });

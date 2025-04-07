@@ -41,9 +41,9 @@ body {
 }
 .clock-container .number#num3 {
   font-weight: bold;
-  top: 45%;
+  top: 50%;
   right: 2px;
-  transform: translateX(-45%);
+  transform: translateY(-50%);
 }
 .clock-container .number#num6 {
   font-weight: bold;

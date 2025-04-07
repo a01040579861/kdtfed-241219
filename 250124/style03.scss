@@ -16,7 +16,7 @@ body {
   font-size: $main-font-size;
   .frame {
     div {
-      border: $main-font-size / 4 solid $main-red-color;
+      border: $main-font-size/4 solid $main-red-color;
       margin: 5px;
       padding: 5px;
     }
@@ -26,7 +26,7 @@ body {
 @for $i from 1 through 9 {
   .frame {
     div:nth-child(#{$i}) {
-      width: $main-font-size * 3.5 * $i;
+      width: $main-font-size * 4 * $i;
     }
   }
 }

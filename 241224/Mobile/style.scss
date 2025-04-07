@@ -1,7 +1,6 @@
 @import "./styles/reset";
 @import "./styles/variables";
 
-// button function
 @mixin buttonStyle {
   margin: 0 auto;
   width: 360px;
@@ -45,10 +44,9 @@
 @mixin filter {
   content: "";
   position: absolute;
-
   left: 0;
   width: 428px;
-  height: 429px;
+  height: 439px;
   background: linear-gradient(
     to bottom,
     map-get($contents-colors, lightColor) 80%,
@@ -83,7 +81,7 @@ body {
         }
       }
     }
-    #snsLogo {
+    #snsLogon {
       text-align: center;
       margin: 200px 0;
       h4 {

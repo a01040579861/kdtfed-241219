@@ -1,7 +1,7 @@
-const sec2Slider = document.querySelector("#sec2 .slider_wrap");
+// Fullpage
+const sec2_Slider = document.querySelector("#sec2 .slider_wrap");
 const sec2_Title = document.querySelector("#sec2 .title");
 
-// Full Page
 new fullpage("#fullpage", {
   autoScrolling: true,
   scrollHorizontally: true,
@@ -10,22 +10,23 @@ new fullpage("#fullpage", {
   afterLoad: (old_elem, new_elem, direction) => {
     if (new_elem.index === 2) {
       sec2();
-      console.log("section 2 hi");
+      console.log("section 2 hello!");
     }
     if (old_elem.index === 2) {
       sec2_reset();
-      console.log("section 2 bye");
+      console.log("section 2 bye!");
     }
   },
 });
 
 function sec2() {
-  sec2Slider.style.cssText = "opacity: 1; transform: translateX(-50px)";
+  sec2_Slider.style.cssText = "opacity: 1; transform: translateX(-50px)";
   sec2_Title.style.cssText = "opacity: 1; transform: translateX(50px)";
 }
+
 function sec2_reset() {
-  sec2Slider.style.cssText = "opacity: 0; transform: translateX(50px)";
-  sec2_Title.style.cssText = "opacity: 1; transform: translateX(-50px)";
+  sec2_Slider.style.cssText = "opacity: 0; transform: translateX(50px)";
+  sec2_Title.style.cssText = "opacity: 0; transform: translateX(-50px)";
 }
 
 // GNB & Toggle

@@ -431,10 +431,10 @@ body {
 }
 
 @keyframes cyberspace {
-  0% {
+  from {
     transform: rotateY(0deg);
   }
-  100% {
+  to {
     transform: rotateY(360deg);
   }
 }

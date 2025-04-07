@@ -1,0 +1,26 @@
+1.변수
+
+2.자료형
+
+3.형변환
+
+4.연산자
+
+5.조건문
+- if문
+- if ~ else문
+- else if문
+- switch case문
+- 삼항조건 연산자
+
+> break문 // continue문
+
+6.반복문
+> Iterable 한 객체 = 배열
+- for문
+- forEach문
+- for ~ of문
+- for ~ in문 : 객체 전용
+
+- while문
+- do...while문

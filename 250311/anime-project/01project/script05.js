@@ -6,6 +6,7 @@ for (let i = 0; i < allElem; i++) {
   const li = document.createElement("li");
   staggerWrap.appendChild(li);
 }
+
 const tl = anime.timeline({
   targets: "ul li",
   delay: anime.stagger(200, { grid: [9, 5], from: "center", axis: "z" }),

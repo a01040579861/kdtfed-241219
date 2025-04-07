@@ -12,13 +12,13 @@ const [spring, , fall] = seasons;
 
 console.log(spring, fall);
 
-const char = ["kim", "lee", "prak", "choi"];
+const char = ["park", "lee", "kim", "choi"];
 
 const [teacher, ...students] = char;
+
 console.log(teacher, students);
 
-// 객체의 구조분해할당 -1
-
+// 객체의 구조분해할당 - 1
 const member = {
   name: "David",
   age: 20,
@@ -27,7 +27,7 @@ const member = {
 const { name: username, age } = member;
 console.log(username, age);
 
-// 객체의 구조분해할당 -2
+// 객체의 구조분해할당 - 2
 const student = {
   name: "David",
   score: {

@@ -10,6 +10,7 @@
         padding: 0;
         box-sizing: border-box;
       }
+
       #graph {
         width: 610px;
         border: 3px solid #000;
@@ -18,23 +19,34 @@
           height: 50px;
           background: orange;
           margin: 5px;
-
           &:nth-child(1) {
             transition: background 1s linear 0s, width 5s linear 0s;
           }
           &:nth-child(2) {
             transition: background 1s ease 1s, width 5s ease 1s;
+            /* transition-property: background, width;
+            transition-duration: 1s, 5s;
+            transition-delay: 1s;
+            transition-timing-function: ease; */
           }
           &:nth-child(3) {
             transition: background 1s ease-in 2s, width 5s ease-in 2s;
+            /* transition-property: background, width;
+            transition-duration: 1s, 5s;
+            transition-delay: 2s;
+            transition-timing-function: ease-in; */
           }
           &:nth-child(4) {
             transition: background 1s ease-out 3s, width 5s ease-out 3s;
+            /* transition-property: background, width;
+            transition-duration: 1s, 5s;
+            transition-delay: 3s;
+            transition-timing-function: ease-out; */
           }
           &:nth-child(5) {
             transition: background 1s ease-in-out 4s, width 5s ease-in-out 4s;
             /* transition-property: background, width;
-            transition-duration: 1s 5s;
+            transition-duration: 1s, 5s;
             transition-delay: 4s;
             transition-timing-function: ease-in-out; */
           }
@@ -57,7 +69,7 @@
             background: yellow;
           }
           &:nth-child(5) {
-            width: 600px;
+            width: 400px;
             background: pink;
           }
         }
@@ -67,11 +79,11 @@
   <body>
     <h1>CSS3 Transition Graph</h1>
     <div id="graph">
-      <div class="bar">1</div>
-      <div class="bar">2</div>
-      <div class="bar">3</div>
-      <div class="bar">4</div>
-      <div class="bar">5</div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
   </body>
 </html>

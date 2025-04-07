@@ -4,10 +4,7 @@
   box-sizing: border-box;
 }
 
-.btn,
-body .checkout,
-body .add,
-body .order {
+.btn, body .checkout, body .add, body .order {
   width: 200px;
   height: 100%;
   padding: 7px;
@@ -26,14 +23,14 @@ body {
   font-size: 1.6rem;
 }
 body .order {
-  background: crimson;
+  background: #dc143c;
   color: #ffffff;
 }
 body .add {
-  background: royalblue;
+  background: #4169e1;
   color: #ffffff;
 }
 body .checkout {
-  background: green;
+  background: #008000;
   color: #ffffff;
 }

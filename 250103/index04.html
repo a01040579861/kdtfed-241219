@@ -3,30 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style04.css" />
-    <title>전후 문자 선택자</title>
+    <title>Document</title>
+    <style>
+      p {
+        counter-increment: num;
+        &::before {
+          content: counter(num) ".";
+        }
+        &::after {
+          content: "- " attr(data-page) " page";
+        }
+      }
+    </style>
   </head>
   <body>
     <h1>Lorem ipsum dolor sit amet</h1>
     <p data-page="52">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos consectetur
-      ea asperiores unde praesentium? Placeat, unde distinctio ut eum dolorem
-      libero. Velit voluptates laudantium magni cumque at voluptatem hic quia.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
+      perspiciatis facere eaque illo dolorum? Eum doloribus excepturi voluptate,
+      sequi officia libero quisquam ratione consectetur, earum quam adipisci
+      harum dolore unde.
     </p>
     <p data-page="273">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem debitis
-      asperiores modi corporis! Distinctio natus, fugiat, cumque voluptatibus
-      repellat consequatur labore qui magni quos ratione perspiciatis!
-      Doloremque dolore optio modi. Ipsam totam sapiente mollitia, harum sed
-      delectus? Neque expedita esse voluptas excepturi consectetur eius, tempora
-      ratione delectus cupiditate voluptate numquam illo quas a similique porro
-      mollitia reprehenderit, provident ab aut. Eius velit et tempora nisi ex
-      aperiam iste, ullam quisquam! Sapiente impedit, nisi, optio odit tenetur
-      velit qui dolorem aliquam, maiores amet veritatis quisquam? Dolorem, quos
-      cupiditate? Debitis, nulla nemo? Harum voluptatem a corrupti aperiam
-      impedit perferendis veniam voluptate atque modi, beatae consequuntur ea.
-      Dicta aspernatur, doloremque, sapiente sit nihil ipsam fugiat nisi minima
-      delectus maxime blanditiis omnis repellendus quas!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+      adipisci? Quam saepe sint omnis tempora commodi perspiciatis qui amet
+      impedit? Nemo in neque omnis quam molestias, blanditiis maxime ea
+      perspiciatis! Repellat, nulla unde reiciendis quos nostrum nam deleniti
+      odit, impedit inventore voluptas illum doloremque totam ab? Quis eveniet
+      voluptatum odit dolore, dicta, placeat inventore assumenda laboriosam amet
+      ipsa, deserunt sequi. Dolores consequuntur inventore corporis officiis
+      illo accusantium perferendis, magni distinctio explicabo quia possimus
+      sapiente enim molestias ipsam magnam quam repellendus nemo, delectus harum
+      ullam aut autem? Accusamus porro iste a? Odit possimus, enim porro dolorem
+      saepe corrupti numquam, ut blanditiis quas officia inventore quis
+      expedita? Dolor id, porro, quia at tempore accusamus incidunt perferendis
+      maiores rerum, inventore non temporibus consequatur.
     </p>
   </body>
 </html>

@@ -10,22 +10,23 @@
         padding: 0;
         box-sizing: border-box;
       }
+
       .parent {
         border: 5px solid #000;
-        background: lightseagreen;
+        background: lightcyan;
         display: grid;
         grid-template-columns: auto auto;
         justify-items: center;
         align-items: center;
         height: 300px;
         div {
-          background: lemonchiffon;
+          background: darkorange;
+          color: #fff;
           /* width: 100px;
-          height: 100px;
-          line-height: 100px; */
+          height: 100px; */
           text-align: center;
-          color: #000;
-          &:last-child {
+          /* line-height: 100px; */
+          &:nth-child(2) {
             justify-self: stretch;
             align-self: stretch;
           }

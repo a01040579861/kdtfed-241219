@@ -7,4 +7,6 @@
 //   (b: number) =>
 //     a + b;
 
-// closure = 클로저
+// // closure = 클로저
+
+// const result = add2(1)(2);

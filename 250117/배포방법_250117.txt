@@ -1,0 +1,48 @@
+*Firebase로 배포하기
+
+1.Firebase는 node.js에서 작동합니다
+
+2.내 컴퓨터에 node.js가 설치되어 있어야 합니다
+cmd : node -v
+
+3.Firebase에 회원가입 후 로그인 > 프로젝트 생성
+
+4.사이드메뉴 > 빌드 > Hosting > 시작하기
+
+5.Firebase CLI 설치 : 
+- 최초 한 번만 설치하면 됨
+- 반드시 관리자 권한으로 cmd 설정 후 설치
+
+6.예외사항 :
+- 컴퓨터 시스템 설정 오류 > Firebase가 설치되었음에도 Firebase명령어를 인식하지 못하는 경우 존재!!!
+
+- 시스템 환경 변수 접속 > window + R
+
+- 시스템 속성 접속 > sysdm.cpl ,3 > 환경변수
+
+- 시스템변수 > Path > 편집
+
+- 새로 만들기 > 찾아보기 클릭
+C:\Users\EZEN\AppData\Roaming\npm
+
+- 좌측하단, 돋보기 > powershell > 관리자로 실행
+
+- 현재 로컬컴퓨터의 보안정책 확인 : Get-ExecutionPolicy
+> 만약, Restricted : 보안정책 엄격한 상태로 제한되어있음
+
+- 보안정책 변경 : Set-ExecutionPolicy RemoteSigned
+> 결론, 우리의 powershell 보안정책 RemoteSigned
+
+- 시스템환경변수 혹은 powershell 보안정책 변경된 이후에는 vscode를 한 번 껐다가 다시켜주시면 됨!!!
+
+7.프로젝트 초기화
+firebase login
+
+8.실제 배포 세팅
+firebase init
+
+9.마지막 배포단계
+firebase deploy
+
+10.Hosting URL
+https://flexible-mobilepage-250117.web.app/

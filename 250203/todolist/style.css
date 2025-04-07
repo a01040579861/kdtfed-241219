@@ -46,15 +46,15 @@ form #user-input input:nth-child(1) {
   border-bottom: 1px solid #3498db;
 }
 form #user-input input:nth-child(1)::-moz-placeholder {
-  font-size: 1.2rem;
   color: #3498db;
+  font-size: 1.2rem;
   opacity: 1;
   -moz-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 form #user-input input:nth-child(1)::placeholder {
-  font-size: 1.2rem;
   color: #3498db;
+  font-size: 1.2rem;
   opacity: 1;
   transition: opacity 0.3s;
 }

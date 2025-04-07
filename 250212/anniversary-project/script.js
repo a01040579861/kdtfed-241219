@@ -9,12 +9,11 @@ const passedDay = Math.round(passedTime / (24 * 60 * 60 * 1000));
 document.querySelector(".accent > span").innerText = `${passedDay} 일`;
 
 const calcDate = (days) => {
-  // 100일째 되는 날
   let future = toFirst + days * (24 * 60 * 60 * 1000);
-  let someDay = new Date(future);
-  let year = someDay.getFullYear();
-  let month = someDay.getMonth() + 1;
-  let date = someDay.getDate();
+  let someday = new Date(future);
+  let year = someday.getFullYear();
+  let month = someday.getMonth() + 1;
+  let date = someday.getDate();
   document.querySelector(
     "#date" + days
   ).innerText = `${year}년 ${month}월 ${date}일`;

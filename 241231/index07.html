@@ -3,27 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index07</title>
+    <title>Document</title>
   </head>
   <body>
-    <form action="http://127.0.0.1:5500/index07.html" method="post">
-      <input type="text" name="id" placeholder="아이디" />
-      <input type="password" name="password" placeholder="비밀번호" />
-      <input type="file" name="file" />
-      <input type="button" id="btn" value="나 버튼임ㅇㅇ" /><br />
+    <form action="http://172.16.105.1:61686/index07.html" method="post">
+      <input type="text" name="search" />
+      <input type="password" />
+      <input type="file" />
+      <input type="button" value="나는 버튼이야" /><br />
       <h4>당신이 좋아하는 스포츠를 선택해주세요(복수선택가능)</h4>
-      <input type="checkbox" name="sports1" />축구<br />
-      <input type="checkbox" name="sports2" />야구<br />
-      <input type="checkbox" name="sports3" />배구<br />
-      <input type="checkbox" name="sports4" />농구<br />
-      <input type="checkbox" name="sports5" />족구<br />
+      <input type="checkbox" name="sports1" />축구
+      <input type="checkbox" name="sports2" />야구
+      <input type="checkbox" name="sports3" />농구
+      <input type="checkbox" name="sports4" />배드민턴
+      <input type="checkbox" name="sports5" />배구
+      <input type="checkbox" name="sports6" />족구<br />
       <h4>당신의 성별은?</h4>
       <input id="female" type="radio" name="gender" /><label for="female"
         >여자</label
       >
-      <label for="male"><input id="man" type="radio" name="gender" />남자</label
+      <label for="male">
+        <input id="male" type="radio" name="gender" />남자 </label
       ><br />
-      <input type="submit" value="보내기" />
+      <input type="submit" value="검색" />
     </form>
   </body>
 </html>

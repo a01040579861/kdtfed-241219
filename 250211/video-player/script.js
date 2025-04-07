@@ -1,5 +1,4 @@
 const playButton = document.querySelector(".play-pause");
-const player = document.querySelector("#music-player");
 const video = document.querySelector("video");
 const progressCover = document.querySelector(".progress");
 const volumeBar = document.querySelector("input[type='range']");
@@ -65,35 +64,16 @@ const setRate = (e) => {
   video.playbackRate = rate;
 };
 
-const videoPoint = (e) => {
-  const mouseX = e.pageX - player.offsetLeft;
-  const progressBarWidth = progressCover.clientWidth;
-  const duration = video.duration;
-  const clickedTime = (mouseX / progressBarWidth) * duration;
-  video.currentTime = clickedTime;
-};
-
 playButton.addEventListener("click", togglePlay);
-video.addEventListener("pointerdown", togglePlay);
+video.addEventListener("click", togglePlay);
 video.addEventListener("timeupdate", updateTime);
 video.addEventListener("timeupdate", updateProgress);
 volumeBar.addEventListener("change", setVolume);
-player.addEventListener("click", videoPoint);
 rateButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     setRate(e);
   });
 });
-
 fullButton.addEventListener("click", () => {
   video.requestFullscreen();
-});
-
-// 전체화면 커서 클릭 영상 플레이
-document.addEventListener("fullscreenchange", () => {
-  if (document.fullscreenElement) {
-    document.addEventListener("pointerdown", togglePlay);
-  } else {
-    document.addEventListener("pointerdown", togglePlay);
-  }
 });

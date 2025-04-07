@@ -54,7 +54,5 @@ const clock = () => {
   secs = secs < 10 ? "0" + secs : secs;
 
   displayTime.innerText = `${period} ${hrs}시 ${mins}분 ${secs}초`;
-  console.log(secs);
 };
 setInterval(clock, 1000);
-// setInterval(실행시킬 함수, 밀리초)

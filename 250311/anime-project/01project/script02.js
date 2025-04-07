@@ -1,7 +1,6 @@
-// 타임라인 만들기
 const tl = anime.timeline({
   easing: "linear",
-  duration: 1000,
+  duraion: 1000,
 });
 
 tl.add({

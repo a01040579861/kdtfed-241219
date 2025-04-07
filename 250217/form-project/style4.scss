@@ -1,21 +1,17 @@
 @import "./styles/reset.scss";
-@import "./styles/variables.scss";
+@import "./styles/variable.scss";
 
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-size: 1.6rem;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include test;
 }
 
 #container {
   width: 540px;
-  height: 900px;
+  height: 840px;
   border: 1px solid map-get($map: $color, $key: border);
   border-radius: 20px;
   box-shadow: 7px 7px 40px rgba($color: #0068ff, $alpha: 0.3);
@@ -28,11 +24,10 @@ body {
     font-size: 3.2rem;
     font-weight: bold;
     color: map-get($map: $color, $key: title);
-    margin-bottom: 40px;
     width: 380px;
   }
   .error {
-    color: map-get($map: $color, $key: error);
+    color: crimson;
     height: 10px;
     font-size: 1.2rem;
   }
@@ -50,7 +45,7 @@ body {
     }
   }
   .phone-wrapper {
-    width: 360px;
+    width: 380px;
     height: 40px;
     margin-top: 20px;
     display: flex;
@@ -117,7 +112,7 @@ body {
   }
   #signup-button {
     width: 380px;
-    height: 70px;
+    height: 75px;
     border: 1px solid map-get($map: $color, $key: input);
     border-radius: 8px;
     font-size: 1.8rem;

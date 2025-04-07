@@ -1,26 +1,12 @@
 :root {
-  /* Font-color */
   --main-dark-color: #000;
   --main-light-color: #fff;
-
-  /* Font-family */
-  --merri-font-family: "Merriweather", serif;
-
-  /* Background-color */
   --back-ground-color: #ebfaff;
-
-  /* Nav-Icon-color */
-  --nav-icon-color: #666;
-
-  /* button-color */
+  --orbitron-font-family: "Orbitron", serif;
   --button-bg-color: #444;
-  /* profile-color */
   --profile-mf-color: #555;
   --profile-sf-color: #bbb;
-
-  /* border-color */
-  --border-bottom-color: #e7e7e5;
-
-  /* Icon-color */
+  --nav-icon-color: #666;
   --icon-shadow-color: #ddd;
+  --border-bottom-color: #eee;
 }

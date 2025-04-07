@@ -1,0 +1,25 @@
+1.변수
+
+2.자료형
+
+3.형변환
+
+4.연산자
+
+5.실행컨텍스트
+1) variableEnvironment
+2) lexicalEnvironment
+> recordEnvironment
+> outerEnvironmentReference
+3) thisBinding
+> scope // scopechain
+*this객체
+
+6.제어문
+> 조건문
+> 반복문
+
+NaN = Not A Number
+변수 할당 > 자료형 값이 숫자인지 아닌지 여부를 판단하는것?
+
+about:blank

@@ -9,10 +9,6 @@ li {
   list-style: none;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 body {
   height: 100vh;
   display: flex;
@@ -26,9 +22,9 @@ body {
   height: 100px;
   border-radius: 50%;
   &.circle1 {
-    background: deeppink;
+    background: burlywood;
   }
   &.circle2 {
-    background: deepskyblue;
+    background: mediumaquamarine;
   }
 }

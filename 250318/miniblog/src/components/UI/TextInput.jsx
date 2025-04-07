@@ -12,13 +12,7 @@ const StyledTextarea = styled.textarea`
 `;
 
 const TextInput = ({ height, value, onChange }) => {
-  return (
-    <StyledTextarea
-      height={height}
-      value={value}
-      onChange={onChange}
-    ></StyledTextarea>
-  );
+  return <StyledTextarea height={height} value={value} onChange={onChange} />;
 };
 
 export default TextInput;

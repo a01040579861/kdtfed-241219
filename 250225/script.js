@@ -121,15 +121,10 @@ const mySymbol2 = Symbol("something");
 console.log(mySymbol1 === mySymbol2);
 console.log(mySymbol1);
 console.log(mySymbol2);
-// 심벌을 생성하는 또 다른 방법 => 전역 심볼레지스트리에 저장하는 방법
 
-// 유일무이한 심볼값이 장점이라고 하지만,
-// 심볼간 값을 공유하거나 논리적으로 비교해야하는 상황이 발생되는
-// 경우에는 전역 심볼 레지스트리에 저장
-
-//심벌을 생성하는 또 다른 방법
-// Symbol()은 고유한 값을 가지고 있는 심벌을 생성 후 반환하지만,
-// Symbol.for()은 전역적으로 존재하는 global symbol table(*전역 심볼 레지스트리)에 저장 및 데이터를 찾아오는 역할
+// 심벌을 생성하는 또 다른 방법 => 전역 심볼 레지스트리에 저장하는 방법
+// 아무리 유일무이한 심볼값이 장점이라고 하지만, 심볼간 값을 공유하거나 논리적으로 비교해야하는 상황이 발생되는 경우에는 전역 심볼 레지스트리에 저장을 하는 것이 좋음!
+// Symbol()은 고유한 값을 가지고 있는 심벌을 생성 후 반환하지만, Symbol.for()는 전역적으로 존재하는 global symbol table(*전역 심볼 레지스트리)에 저장 및 데이터를 찾아오는 역할!!
 
 const s1 = Symbol.for("foo");
 const s2 = Symbol.for("foo");
@@ -142,7 +137,7 @@ console.log(Symbol.keyFor(token) === "tokenString");
 
 // 심볼을 생성하는 일반적인 방법
 const obj01 = {};
-const v = "name";
+const v = "my";
 
 obj01[v] = "myProps";
 obj01[123] = 123;
@@ -151,6 +146,7 @@ obj01["props" + 123] = false;
 console.log(obj01);
 
 const obj02 = {};
+
 const mySymbol3 = Symbol("mySymbol");
 const mySymbol4 = Symbol("mySymbol");
 
@@ -159,13 +155,11 @@ obj02[mySymbol4] = 456;
 
 console.log(obj02);
 
-// 사용자 회원가입 시, 동명이인의 사용자를 독립적인 개체로
-// 구분지어서 관리하고자 할 때 Symbol()을 이용하는 방법
-
+// 사용자 회원가입 시, 동명이인의 사용자를 독립적인 개체로 구분지어서 관리하고자 할 때 Symbol()을 이용하는 방법
 // 제주 : 이효리
 // 서울 : 이효리
 
-// Class 선언시, Symbol() 이용하는 방법
+// Class 선언 시, Symbol()을 이용하는 방법
 
 const count = Symbol();
 
@@ -175,7 +169,7 @@ class Counter {
   }
 
   add() {
-    return this.count++;
+    return this[count]++;
   }
 
   get() {
@@ -194,6 +188,5 @@ class BetterCounter extends Counter {
 }
 
 const test2 = new BetterCounter();
-
 console.log(test2);
 console.log(test2.count());

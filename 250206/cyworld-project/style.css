@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +14,7 @@ html body {
 
 #container {
   height: 100vh;
-  background: url("./contents/background.png") center/cover no-repeat;
+  background: url("https://japan-figure.com/cdn/shop/articles/kuromi.jpg?v=1702464902") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,20 +33,17 @@ html body {
 /* ==== inner-left ==== */
 #inner-left {
   width: 203px;
-  height: 468px;
+  height: 472px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 #inner-left .inner-left-header {
   width: 100%;
-  height: 26px;
+  height: 30px;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
-  text-align: center;
-  font-size: 0.75rem;
-  line-height: 3.5;
-  font-family: "Press Start 2P";
 }
 #inner-left .inner-left-header .zero {
   color: #dc143c;
@@ -56,12 +51,12 @@ html body {
 #inner-left .inner-left-body {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 20px;
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
+  border: 1px solid #808080;
   border-radius: 14px;
-  padding: 15px;
+  padding: 26px;
 }
 #inner-left .inner-left-body .left-body-title {
   width: 100%;
@@ -71,128 +66,35 @@ html body {
   align-items: center;
 }
 #inner-left .inner-left-body .left-body-title .title-img {
-  width: 170px;
-  height: 143px;
-  background: url("./contents/smile.png") center/cover no-repeat;
-  border-radius: 8px;
+  width: 148px;
+  height: 133px;
+  background: url("./contents/iu.jpg") center/cover no-repeat;
+}
+#inner-left .inner-left-body .left-body-title .title-line {
+  width: 100%;
+  margin: 12px 0;
+  border-top: 1px dotted #000;
 }
 #inner-left .inner-left-body .left-body-profile {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-#inner-left .inner-left-body .left-body-profile .profile-tag {
-  width: 100%;
-  text-align: center;
-  padding: 4px 8px;
-  border: 2px solid #808080;
-  border-radius: 4px;
-  box-shadow: 0 0 8px rgba(211, 211, 211, 0.8);
-  font-size: 1rem;
-}
-#inner-left .inner-left-body .left-body-profile .profile-tag em {
-  color: #55b2e4;
-  font: 700 1rem/1 "arial";
-  text-transform: uppercase;
+  gap: 18px;
 }
 #inner-left .inner-left-body .left-body-profile .profile-detail {
   display: flex;
   align-items: center;
-  font-family: "Nanum Brush Script";
-}
-#inner-left .inner-left-body .left-body-profile .profile-detail span {
-  margin: 5px 10px 10px 10px;
-  text-align: left;
-  font-size: 1.5rem;
-  line-height: 2.8rem;
-  -moz-user-select: -moz-none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-#inner-left .inner-left-body .left-body-profile .profile-history {
-  height: 20px;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-}
-#inner-left .inner-left-body .left-body-profile .profile-history span {
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: bold;
-  line-height: 2.2rem;
-}
-#inner-left .inner-left-body .left-body-profile .profile-history span .fa-caret-right {
-  width: 15px;
-  height: 15px;
-  font-size: 1rem;
-  color: #ff9a16;
+  gap: 6px;
   cursor: pointer;
 }
-#inner-left .inner-left-body .left-body-profile .profile-history div {
-  text-align: center;
-  padding: 2px;
-}
-#inner-left .inner-left-body .left-body-profile .profile-history div i {
-  width: 15px;
-  height: 15px;
-  font-size: 1rem;
-  color: #808080;
-  line-height: 1.5rem;
-  cursor: pointer;
-}
-#inner-left .inner-left-body .left-body-profile .profile-history div i:first-child {
-  margin-right: -5px;
-}
-#inner-left .inner-left-body .left-body-profile .profile-history div i:last-child {
-  margin-left: -5px;
-}
-#inner-left .inner-left-body .left-body-profile .profile-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #071878;
-  padding: 10px 4px;
-}
-#inner-left .inner-left-body .left-body-footer {
-  width: 100%;
+#inner-left .inner-left-body .left-body-footer .footer-feel {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 8px;
-  background: #f3f3f3;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  gap: 6px;
 }
-#inner-left .inner-left-body .left-body-footer .music-controller {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-#inner-left .inner-left-body .left-body-footer .music-controller .control-btn {
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-#inner-left .inner-left-body .left-body-footer .music-controller .progress-bar {
-  width: 60px;
-  height: 5px;
-  background: #ff5722;
-  position: relative;
-  cursor: pointer;
-}
-#inner-left .inner-left-body .left-body-footer .music-controller .progress-bar .progress {
-  width: 0%;
-  height: 100%;
-  background: #f3f3f3;
-}
-#inner-left .inner-left-body .left-body-footer .music-controller .volume-control {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-#inner-left .inner-left-body .left-body-footer .music-controller .volume-control input {
-  width: 60px;
+#inner-left .inner-left-body .left-body-footer .footer-feel .feel-title {
+  font-weight: bold;
 }
 
 /* ==== inner-right ==== */
@@ -202,26 +104,23 @@ html body {
   padding: 0 5px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 7px;
 }
 #inner-right .inner-right-header {
   display: flex;
   justify-content: space-between;
+  color: #55b2e4;
 }
 #inner-right .inner-right-header .header-title {
-  color: #55b2e4;
-  font-weight: nomal;
+  font-weight: bold;
 }
 #inner-right .inner-right-header .header-privacy {
-  font-size: 1rem;
-  line-height: 2;
-  padding-right: 3px;
-  color: #808080;
+  font-size: 1.4rem;
 }
 #inner-right .inner-right-body {
   width: 100%;
   height: 445px;
-  border: 1px solid #000;
+  border: 1px solid #808080;
   border-radius: 14px;
   background: #fff;
 }
@@ -235,7 +134,7 @@ html body {
 /* ==== navigation ==== */
 #navigation {
   width: 70px;
-  height: 140px;
+  height: 110px;
   position: absolute;
   top: 20%;
   right: -69px;

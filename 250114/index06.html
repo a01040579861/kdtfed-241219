@@ -9,27 +9,28 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        .parent {
-          border: 5px solid green;
-          width: 100%;
-          height: 500px;
-          display: flex;
-          align-items: flex-start;
-          gap: 10px;
-          div {
-            width: 300px;
-            background: chartreuse;
-            margin: 5px;
-            &.child1 {
-              height: 100px;
-            }
-            &.child2 {
-              height: 300px;
-            }
-            &.child3 {
-              height: 200px;
-              align-self: flex-end;
-            }
+      }
+
+      .parent {
+        border: 5px solid green;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        div {
+          width: 300px;
+          background: crimson;
+          margin: 5px;
+          &.child1 {
+            height: 100px;
+          }
+          &.child2 {
+            height: 300px;
+          }
+          &.child3 {
+            height: 200px;
+            align-self: flex-end;
           }
         }
       }

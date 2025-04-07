@@ -13,8 +13,7 @@ fetch(productInfo)
         id: idCounter++,
       })),
     };
-
-    // 기존 Json Data 제거 함수
+    // 기존 json Data 제거함수
     const removeItems = () => {
       const items = document.querySelectorAll("li");
       items.forEach((item) => {
@@ -52,7 +51,7 @@ fetch(productInfo)
       ul.appendChild(li);
 
       li.addEventListener("click", () => {
-        window.location.href = "./product-detail.html";
+        window.location.href = "product-detail.html";
       });
     };
 
@@ -65,9 +64,8 @@ fetch(productInfo)
 
     importData();
 
-    // 오름차순 정렬
-    const asceBtn = document.querySelector(".ascending");
-
+    // 오름차순정렬
+    const asceButton = document.querySelector(".ascending");
     const sortAsce = (e) => {
       e.preventDefault();
       const myProducts = products.data.sort((a, b) => {
@@ -80,15 +78,16 @@ fetch(productInfo)
       });
     };
 
-    asceBtn.addEventListener("click", sortAsce);
+    asceButton.addEventListener("click", sortAsce);
 
-    // 내림차순 정렬
-    const deceBtn = document.querySelector(".decending");
+    // 내림차순정렬
+    const descButton = document.querySelector(".decending");
     const sortDesc = (e) => {
       e.preventDefault();
       const myProducts = products.data.sort((a, b) => {
         return b.price - a.price;
       });
+
       removeItems();
 
       myProducts.forEach((product) => {
@@ -96,9 +95,9 @@ fetch(productInfo)
       });
     };
 
-    deceBtn.addEventListener("click", sortDesc);
+    descButton.addEventListener("click", sortDesc);
 
-    // 최신순 정렬
+    // 최신순정렬
     const newlisting = document.querySelector(".newlisting");
     const sortNew = (e) => {
       e.preventDefault();
@@ -117,8 +116,7 @@ fetch(productInfo)
 
     // 검색이벤트
     const searchBar = document.querySelector(".searchBar");
-    // console.log(searchBar);
-    searchBar.addEventListener("input", (e) => {
+    searchBar.addEventListener("input", () => {
       const keyword = searchBar.value.toLowerCase();
       if (keyword === "") {
         removeItems();
@@ -134,9 +132,8 @@ fetch(productInfo)
       }
     });
 
-    // 선택 & 옵션 이벤트
+    // 셀렉트 & 옵션이벤트
     const select = document.querySelector("select");
-
     const selectCategory = (e) => {
       const selectedIndex = e.target.options.selectedIndex;
       const value = e.target.options[selectedIndex].value;
@@ -153,10 +150,11 @@ fetch(productInfo)
     select.addEventListener("change", selectCategory);
   })
   .catch((error) => {
-    console.log(error);
+    console.error(error);
   });
 
 // Channel Talk
+
 (function () {
   var w = window;
   if (w.ChannelIO) {
@@ -193,5 +191,5 @@ fetch(productInfo)
 })();
 
 ChannelIO("boot", {
-  pluginKey: "f8b985bd-0042-41fb-bfd7-6fc687f7f27a",
+  pluginKey: "8f0f1a69-ac0d-4265-9f70-0ce18b8e2539",
 });

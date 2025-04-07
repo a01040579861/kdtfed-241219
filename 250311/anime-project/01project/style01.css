@@ -9,10 +9,6 @@ li {
   list-style: none;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 div {
   width: 100px;
   height: 100px;
@@ -22,8 +18,8 @@ div.box1 {
   background: blueviolet;
 }
 div.box2 {
-  background: lightblue;
+  background: lightgreen;
 }
 div.box3 {
-  background: lightseagreen;
+  background: lightcoral;
 }

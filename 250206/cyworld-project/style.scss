@@ -1,9 +1,6 @@
 @import "./styles/reset.scss";
 @import "./styles/variables.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
 /* common */
 html {
   font-size: 62.5%;
@@ -14,7 +11,8 @@ html {
 
 #container {
   height: 100vh;
-  background: url("./contents/background.png") center/cover no-repeat;
+  background: url("https://japan-figure.com/cdn/shop/articles/kuromi.jpg?v=1702464902")
+    center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,20 +31,16 @@ html {
 /* ==== inner-left ==== */
 #inner-left {
   width: 203px;
-  height: 468px;
+  height: 472px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
   .inner-left-header {
     width: 100%;
-    height: 26px;
+    height: 30px;
+    font-size: 1.4rem;
     display: flex;
     justify-content: center;
-    text-align: center;
-    font-size: 0.75rem;
-    line-height: 3.5;
-    font-family: map-get($map: $font, $key: press-font-family);
     .zero {
       color: map-get($map: $color, $key: accent);
     }
@@ -54,12 +48,12 @@ html {
   .inner-left-body {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 20px;
     width: 100%;
     height: 100%;
-    border: 1px solid map-get($map: $color, $key: dark);
+    border: 1px solid map-get($map: $color, $key: gray);
     border-radius: 14px;
-    padding: 15px;
+    padding: 26px;
     .left-body-title {
       width: 100%;
       display: flex;
@@ -67,10 +61,14 @@ html {
       justify-content: center;
       align-items: center;
       .title-img {
-        width: 170px;
-        height: 143px;
-        background: url("./contents/smile.png") center/cover no-repeat;
-        border-radius: 8px;
+        width: 148px;
+        height: 133px;
+        background: url("./contents/iu.jpg") center/cover no-repeat;
+      }
+      .title-line {
+        width: 100%;
+        margin: 12px 0;
+        border-top: 1px dotted map-get($map: $color, $key: dark);
       }
     }
     .left-body-profile {
@@ -78,124 +76,21 @@ html {
       height: 100%;
       display: flex;
       flex-direction: column;
-      .profile-tag {
-        width: 100%;
-        text-align: center;
-        padding: 4px 8px;
-        border: 2px solid map-get($map: $color, $key: gray);
-        border-radius: 4px;
-        box-shadow: 0 0 8px rgba($color: lightgray, $alpha: 0.8);
-        font-size: 1rem;
-        em {
-          color: map-get($map: $color, $key: theme);
-          font: 700 1rem/1 "arial";
-          text-transform: uppercase;
-        }
-      }
+      gap: 18px;
       .profile-detail {
         display: flex;
         align-items: center;
-        font-family: map-get($map: $font, $key: embed-font-family);
-        span {
-          margin: 5px 10px 10px 10px;
-          text-align: left;
-          font-size: 1.5rem;
-          line-height: 2.8rem;
-          -ms-user-select: none;
-          -moz-user-select: -moz-none;
-          -webkit-user-select: none;
-          -khtml-user-select: none;
-          user-select: none;
-        }
-      }
-      .profile-history {
-        height: 20px;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        align-items: center;
-        span {
-          text-transform: uppercase;
-          font-size: 1.2rem;
-          font-weight: bold;
-          line-height: 2.2rem;
-          .fa-caret-right {
-            width: 15px;
-            height: 15px;
-            font-size: 1rem;
-            color: map-get($map: $color, $key: hisBtn);
-            cursor: pointer;
-          }
-        }
-        div {
-          text-align: center;
-          padding: 2px;
-          i {
-            width: 15px;
-            height: 15px;
-            font-size: 1rem;
-            color: map-get($map: $color, $key: gray);
-            line-height: 1.5rem;
-            cursor: pointer;
-            &:first-child {
-              margin-right: -5px;
-            }
-            &:last-child {
-              margin-left: -5px;
-            }
-          }
-        }
-      }
-      .profile-name {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: map-get($map: $color, $key: name);
-        padding: 10px 4px;
+        gap: 6px;
+        cursor: pointer;
       }
     }
     .left-body-footer {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 8px;
-      background: map-get($map: $color, $key: footerBg);
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
-      .music-controller {
-        width: 100%;
+      .footer-feel {
         display: flex;
-        align-items: center;
-        gap: 10px;
-
-        .control-btn {
-          font-size: 1.6rem;
-          cursor: pointer;
-        }
-
-        .progress-bar {
-          width: 60px;
-          height: 5px;
-          background: map-get($map: $color, $key: progress);
-          position: relative;
-          cursor: pointer;
-
-          .progress {
-            width: 0%;
-            height: 100%;
-            background: map-get($map: $color, $key: footerBg);
-          }
-        }
-
-        .volume-control {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-
-          input {
-            width: 60px;
-          }
+        flex-direction: column;
+        gap: 6px;
+        .feel-title {
+          font-weight: bold;
         }
       }
     }
@@ -209,25 +104,22 @@ html {
   padding: 0 5px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 7px;
   .inner-right-header {
     display: flex;
     justify-content: space-between;
+    color: map-get($map: $color, $key: theme);
     .header-title {
-      color: map-get($map: $color, $key: theme);
-      font-weight: nomal;
+      font-weight: bold;
     }
     .header-privacy {
-      font-size: 1rem;
-      line-height: 2;
-      padding-right: 3px;
-      color: map-get($map: $color, $key: gray);
+      font-size: 1.4rem;
     }
   }
   .inner-right-body {
     width: 100%;
     height: 445px;
-    border: 1px solid map-get($map: $color, $key: dark);
+    border: 1px solid map-get($map: $color, $key: gray);
     border-radius: 14px;
     background: map-get($map: $color, $key: light);
     iframe {
@@ -242,7 +134,7 @@ html {
 /* ==== navigation ==== */
 #navigation {
   width: 70px;
-  height: 140px;
+  height: 110px;
   position: absolute;
   top: 20%;
   right: -69px;

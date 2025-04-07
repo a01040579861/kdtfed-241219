@@ -1,12 +1,13 @@
-const openBtn = document.querySelector("#open");
+const openButton = document.querySelector("#open");
+const closeButton = document.querySelector("#close");
 const modalBox = document.querySelector("#modal-box");
-const closeBtn = document.querySelector("#close");
 
-openBtn.addEventListener("click", function () {
+openButton.addEventListener("click", function () {
   this.classList.add("btnActive");
   modalBox.classList.add("active");
 });
-closeBtn.addEventListener("click", function () {
-  openBtn.classList.remove("btnActive");
+
+closeButton.addEventListener("click", function () {
+  openButton.classList.remove("btnActive");
   modalBox.classList.remove("active");
 });

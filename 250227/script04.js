@@ -1,6 +1,5 @@
-const btn = document.querySelector("button");
+const button = document.querySelector("button");
 const result = document.querySelector("#result");
-// console.log(btn, result);
 
 function* train() {
   yield "판교";
@@ -16,13 +15,12 @@ function* train() {
 }
 
 const gyeonggang = train();
-
-btn.addEventListener("click", () => {
+button.addEventListener("click", () => {
   let current = gyeonggang.next();
   if (current.done !== true) {
     result.innerText = current.value;
   } else {
     result.innerText = "종점!";
-    btn.setAttribute("disabled", "disabled");
+    button.setAttribute("disabled", "disabled");
   }
 });

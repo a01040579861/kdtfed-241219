@@ -1,14 +1,10 @@
-import React, { useState, useRef, useContext } from "react";
-import { TodoDispatchCotext } from "../App";
+import React, { useState, useRef } from "react";
 
-const TodoEditor = () => {
-  const { onCreate } = useContext(TodoDispatchCotext);
-
+const TodoEditor = ({ onCreate }) => {
   const [content, setContent] = useState("");
   const inputRef = useRef();
 
   const onChangeContent = (e) => {
-    e.preventDefault();
     setContent(e.target.value);
   };
   const onSubmit = () => {
@@ -26,7 +22,7 @@ const TodoEditor = () => {
   };
   return (
     <div className="TodoEditor">
-      <h4>새로운 Todo 작성하기🖋</h4>
+      <h4>새로운 Todo 작성하기 ✍️</h4>
       <form className="editor_wrapper" name="todolist" action="#" method="get">
         <input
           type="text"

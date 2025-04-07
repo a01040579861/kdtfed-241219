@@ -15,7 +15,7 @@ a {
 }
 
 $color: (
-  bg: #fcfcfc,
+  background: #fcfcfc,
   border: #ccc,
 );
 
@@ -35,7 +35,7 @@ body {
   display: flex;
   justify-content: center;
   #userInput {
-    width: 320px;
+    width: 260px;
     height: 100px;
     ul {
       li {
@@ -47,8 +47,6 @@ body {
         }
         input[type="text"] {
           width: 140px;
-          outline: none;
-          text-align: center;
           border: none;
           border-bottom: 1px solid map-get($map: $color, $key: border);
         }
@@ -63,8 +61,10 @@ body {
   #result {
     width: 300px;
     height: 100px;
+    text-align: center;
+    line-height: 100px;
     border: 1px solid map-get($map: $color, $key: border);
     border-radius: 12px;
-    background: map-get($map: $color, $key: bg);
+    background: map-get($map: $color, $key: background);
   }
 }

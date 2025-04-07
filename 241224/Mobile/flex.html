@@ -16,11 +16,17 @@
         border: 10px solid crimson;
         display: flex;
         flex-direction: column;
-        /* flex 는 별도의 설정이 없다면 중심축은 무조건 가로 = row */
+        /* flex-direction: row; */
+        /* flex는 별도의 설정이 없다면 중심축은 무조건 가로 = row */
         /* flex에 중심축을 변경하고자 한다면, 세로 = column */
-        /* 중심축을 기준으로 정렬 */
+
+        /* 중심축을 기준으로 정렬 = justify-content */
         /* flex-start / center / flex-end */
         justify-content: center;
+
+        /* 교차축을 기준으로 정렬 = align-items */
+        align-items: center;
+
         .child {
           width: 200px;
           height: 200px;

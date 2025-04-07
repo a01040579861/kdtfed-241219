@@ -10,6 +10,7 @@
         padding: 0;
         box-sizing: border-box;
       }
+
       .parent {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -19,19 +20,19 @@
           border: 1px solid #000;
           background: dodgerblue;
           &:nth-child(1) {
-            background: chartreuse;
+            background: crimson;
             grid-column: 1 / span 2;
             grid-row: 1;
           }
           &:nth-child(2) {
-            background: slateblue;
+            background: yellowgreen;
             grid-column-start: 3;
             grid-row: 1 / span 2;
           }
           &:nth-child(5) {
-            background: coral;
+            background: violet;
             grid-row: 3;
-            grid-column: 1 / 4;
+            grid-column: 1 / span 3;
           }
         }
       }

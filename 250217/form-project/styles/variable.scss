@@ -1,0 +1,18 @@
+$color: (
+  light: #ffffff,
+  dark: #000000,
+  border: #aacdff,
+  input: #d2d2d2,
+  title: #0068ff,
+  hr: #e6e6e6,
+  placeholder: #797979,
+);
+
+@mixin test {
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: map-get($map: $color, $key: dark);
+}

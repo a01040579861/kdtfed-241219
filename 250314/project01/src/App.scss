@@ -1,9 +1,17 @@
+@use "sass:map";
+
 $color: (
   light: #fff,
   dark: #000,
   border: #808080,
   date: #1f93ff,
 );
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 ul,
 li {
@@ -23,17 +31,12 @@ body {
   font-size: 1.6rem;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .App {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
+
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -41,7 +44,7 @@ body {
 
 .Header {
   h1 {
-    color: map-get($map: $color, $key: date);
+    color: map.get($map: $color, $key: date);
     margin-top: 10px;
   }
 }
@@ -54,7 +57,7 @@ body {
     margin-top: 10px;
     input[type="text"] {
       flex: 1;
-      border: 1px solid map-get($map: $color, $key: border);
+      border: 1px solid map.get($map: $color, $key: border);
       border-radius: 4px;
       padding: 14px;
       &::placeholder {
@@ -63,7 +66,7 @@ body {
       }
       &:focus {
         outline: none;
-        border: 1px solid map-get($map: $color, $key: date);
+        border: 1px solid map.get($map: $color, $key: date);
         &::placeholder {
           opacity: 0;
         }
@@ -72,10 +75,9 @@ body {
     input[type="button"] {
       width: 80px;
       border: none;
-      background: map-get($map: $color, $key: date);
       border-radius: 4px;
-      color: map-get($map: $color, $key: light);
-      cursor: pointer;
+      background: map.get($map: $color, $key: date);
+      color: map.get($map: $color, $key: light);
     }
   }
 }
@@ -84,7 +86,7 @@ body {
   .searchbar {
     width: 100%;
     border: none;
-    border-bottom: 1px solid map-get($map: $color, $key: border);
+    border-bottom: 1px solid map.get($map: $color, $key: border);
     margin: 10px 0 20px;
     padding: 14px;
     &::placeholder {
@@ -93,7 +95,7 @@ body {
     }
     &:focus {
       outline: none;
-      border-bottom: 1px solid map-get($map: $color, $key: date);
+      border-bottom: 1px solid map.get($color, date);
       &::placeholder {
         opacity: 0;
       }
@@ -107,12 +109,12 @@ body {
 }
 
 .TodoItem {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
-  border-bottom: 1px dashed map-get($map: $color, $key: border);
+  gap: 14px;
+  width: 100%;
+  border-bottom: 1px dashed map.get($map: $color, $key: border);
   padding-bottom: 10px;
   .checkbox_col {
     width: 20px;
@@ -124,16 +126,14 @@ body {
   }
   .date_col {
     font-size: 1.4rem;
-    color: map-get($map: $color, $key: border);
+    color: map.get($map: $color, $key: border);
   }
   .btn_col {
     button {
       border: none;
-      padding: 4px;
       border-radius: 4px;
+      padding: 4px;
       font-size: 1.4rem;
-      background: map-get($map: $color, $key: date);
-      color: map-get($map: $color, $key: light);
       cursor: pointer;
     }
   }

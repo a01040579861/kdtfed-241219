@@ -16,8 +16,8 @@ a {
 
 $color: (
   dark: #000,
-  bg: #ea7612,
   light: #fff,
+  bg: #ea7612,
   accent: #dc143c,
 );
 
@@ -46,9 +46,9 @@ body {
     font-size: 2rem;
     &#num3 {
       font-weight: bold;
-      top: 45%;
+      top: 50%;
       right: 2px;
-      transform: translateX(-45%);
+      transform: translateY(-50%);
     }
     &#num6 {
       font-weight: bold;

@@ -1,3 +1,3 @@
 export const hello = (message) => {
-    console.log("hello" + message);
+    console.log("Hello" + message);
 };

@@ -24,11 +24,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #000000;
 }
 
 #container {
   width: 540px;
-  height: 900px;
+  height: 840px;
   border: 1px solid #aacdff;
   border-radius: 20px;
   box-shadow: 7px 7px 40px rgba(0, 104, 255, 0.3);
@@ -42,11 +43,10 @@ body {
   font-size: 3.2rem;
   font-weight: bold;
   color: #0068ff;
-  margin-bottom: 40px;
   width: 380px;
 }
 #container .error {
-  color: #f00;
+  color: crimson;
   height: 10px;
   font-size: 1.2rem;
 }
@@ -68,7 +68,7 @@ body {
   font-size: 1.6rem;
 }
 #container .phone-wrapper {
-  width: 360px;
+  width: 380px;
   height: 40px;
   margin-top: 20px;
   display: flex;
@@ -135,7 +135,7 @@ body {
 }
 #container #signup-button {
   width: 380px;
-  height: 70px;
+  height: 75px;
   border: 1px solid #d2d2d2;
   border-radius: 8px;
   font-size: 1.8rem;

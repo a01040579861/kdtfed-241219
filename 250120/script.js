@@ -14,9 +14,11 @@
 // console.log(a);
 
 // a = ++a;
+
 // console.log(a);
 
 // a = --a;
+
 // console.log(a);
 
 // let x = 10;
@@ -27,15 +29,18 @@
 //   y = 4,
 //   result;
 
-// result = x + y--;
+// result = x + --y;
 
-// Garbage Collector = GC;
+// console.log(result);
+// console.log(y);
 
+// Garbage Collector = GC
 // const actor = "현빈";
 // const movie = "하얼빈";
 
-// const result = actor + "님은" + movie "에 출연하였습니다";
-// const result = `${actor}님은 ${movie}에 출연하였습니다.`;
+// const result = actor + "님은 " + movie + "에 출연하였습니다!";
+
+// const result = `${actor}님은 ${movie}에 출연하였습니다`;
 
 // console.log(result);
 
@@ -72,5 +77,6 @@ document.write(str);
 // let a = 10,
 //   b = 3;
 
-// let result = a > b ? "JavaScript" : "TypeScript";
+// let result = a < b ? "Javascript" : "Typescript";
+
 // console.log(result);

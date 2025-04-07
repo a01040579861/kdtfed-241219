@@ -1,9 +1,9 @@
-import GlobalStyles from "./styles/GlobalStyles.styles";
 import styled from "styled-components";
-import MainPage from "./components/UI/PAGES/MainPage";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PostWritePage from "./components/UI/PAGES/PostWritePage";
-import PostViewPage from "./components/UI/PAGES/PostViewPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import GlobalStyles from "./styles/GlobalStyles.styles";
+import MainPage from "./components/PAGES/MainPage";
+import PostWritePage from "./components/PAGES/PostWritePage";
+import PostViewPage from "./components/PAGES/PostViewPage";
 
 const MainTitleText = styled.h2`
   font-size: 24px;

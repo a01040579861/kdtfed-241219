@@ -17,8 +17,8 @@ body {
     justify-content: center;
     align-items: center;
     &::before {
-      position: absolute;
       content: "";
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
@@ -30,6 +30,7 @@ body {
       color: #fff;
       display: flex;
       flex-direction: column;
+      gap: 10px;
     }
   }
 }

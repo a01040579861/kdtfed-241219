@@ -11,18 +11,19 @@ const getCurrentWeather = (latitude, longitude) => {
       const weather = document.querySelector(".weather");
       const temp = document.querySelector(".temp");
       const icon = document.querySelector(".icon");
+      console.log(temp);
 
       let cityName;
       switch (result.name) {
         case "Jamwon-dong":
-          cityName = "🤗 역삼동";
+          cityName = "🏠 역삼동";
           break;
       }
 
       let weatherInfo;
       switch (result.weather[0].main) {
         case "Haze":
-          weatherInfo = "☁ 안개";
+          weatherInfo = "😶‍🌫️ 안개";
           break;
       }
 
@@ -39,13 +40,13 @@ const getPosition = (position) => {
 };
 
 const errorHandle = (error) => {
-  console.log(error);
+  console.error(error);
 };
 
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(getPosition, errorHandle);
 } else {
-  console.log("geolocation in not available");
+  console.log("geolocation is not available");
 }
 
 const imgURL = `https://api.unsplash.com/photos/random?client_id=${unsplash}`;

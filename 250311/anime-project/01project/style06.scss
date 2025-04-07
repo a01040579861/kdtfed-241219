@@ -15,34 +15,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
+
 main {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #f00;
   position: relative;
   .circle {
     position: absolute;
+    top: calc(50% - 208px);
+    left: calc(50% - 405px);
     width: 10px;
     height: 10px;
     background: #fff;
-    top: calc(50% - 208px);
-    left: calc(50% - 405px);
     border-radius: 50%;
   }
   .eye {
     position: absolute;
-    top: calc(48%);
+    top: calc(50%);
     left: calc(50% + 200px);
     width: 20px;
     height: 20px;
@@ -64,7 +58,7 @@ main {
     height: 20px;
   }
   100% {
-    height: 5px;
+    height: 10px;
     transform: skew(10deg);
   }
 }

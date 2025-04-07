@@ -20,7 +20,6 @@ html {
 
 body {
   font-size: 1.6rem;
-  background: url("./img/music_view10.gif") center/cover no-repeat;
 }
 
 figure {
@@ -28,6 +27,10 @@ figure {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  background-image: url("https://img.etnews.com/photonews/1606/815976_20160627145138_759_0001.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 figure > h1 {
   position: absolute;
@@ -308,8 +311,8 @@ figure .btnNext::after {
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 .loading span {
@@ -326,7 +329,7 @@ figure .btnNext::after {
 }
 .loading span:nth-child(2) {
   background: dodgerblue;
-  animation-duration: 0.8s;
+  animation-delay: 0.8s;
 }
 
 @keyframes loading {

@@ -1,43 +1,15 @@
-// const vegetable = ["양상추", "토마토", "피클"];
+// 반복문 & 배열
+// 문자열 => 정규표현식 => 배열
+// 문자열 => 유사배열
+// length & index
 
-// const meat = ["불고기"];
+const str = "Hello, everyone";
 
-// const meatBurger = vegetable.concat(meat);
+// 1) 문자열을 배열로 변환하는 방법
+// console.log(str.split(""));
 
-// console.log(meatBurger);
+// 2) 문자열을 배열로 변환하는 방법
+// console.log([...str]);
 
-// const meatBurger = [vegetable, meat];
-
-// console.log(meatBurger);
-
-// const week = ["sun", "mon", "tue"];
-// console.log(week.sort());
-
-// const values = [5, 20, 3, 11, 4, 15];
-// console.log(
-//   values.sort((a, b) => {
-//     return b - a;
-//   })
-// );
-
-// const arr = [1, 2, 3, 4];
-// arr.push(5);
-// console.log(arr);
-
-// arr.pop();
-// console.log(arr);
-
-// arr.push("lion");
-// console.log(arr);
-
-// arr.shift();
-// console.log(arr);
-
-// arr.unshift("bear");
-// console.log(arr);
-
-const sub = [1, 2, 3, 4, 5, 6, 7, 8];
-// console.log(sub);
-
-console.log(sub.splice(2));
-console.log(sub.splice(2, 2));
+// 3) 문자열을 배열로 변환하는 방법
+// console.log(Array.from(str));

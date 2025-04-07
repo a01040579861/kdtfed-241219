@@ -28,6 +28,7 @@ body {
 }
 #container #today {
   font-size: 22px;
+  margin-bottom: 6px;
 }
 #container #clock {
   font-size: 18px;

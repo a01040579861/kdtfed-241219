@@ -9,7 +9,10 @@ const loop = () => {
 
   character.style.left = `${targetX}px`;
   character.style.top = `${targetY}px`;
+
   degree += 1;
+
+  requestAnimationFrame(loop);
 };
 
 loop();
