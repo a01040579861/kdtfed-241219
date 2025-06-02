@@ -26,6 +26,8 @@ html body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* game 1 */
+  /* game 2 */
 }
 #wrapper #wrapper-header {
   width: 100%;
@@ -56,8 +58,8 @@ html body {
   border-radius: 14px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 15px;
   box-shadow: 0 0 8px #808080;
   overflow: hidden;
@@ -140,8 +142,8 @@ html body {
   border-radius: 14px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 15px;
   box-shadow: 0 0 8px #808080;
   overflow: hidden;
@@ -180,6 +182,7 @@ html body {
 }
 #wrapper > section:nth-child(3) .game-lotto-number span {
   color: #dc143c;
+  font-weight: bold;
 }
 #wrapper > section:nth-child(3) .lotto-btn {
   position: relative;

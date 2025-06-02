@@ -1,0 +1,46 @@
+1. Next.js
+
+1) Error Handling : 컴포넌트 내 에러가 발생됐을때 별도의
+에러 컴포넌트에서 해당 요소를 처리할 수 있다. 라는 것을 
+같이 확인해보고 싶었음.
+
+1. Route Group > with-searchbar
+- page.tsx : force-dynamic (주석//삭제)
+
+2. Global Layout > Footer.tsx
+- fetch함수, 옵션 => force-cache
+
+3. Route Group > with-searchbar
+- page.tsx => RecoBooks, suspense 로 감싸져있기때문에
+ Next.js 15버전부터는 try, catch문으로 에러처리 불가
+=> try catch문 삭제
+
+4. Route Group > with-searchbar
+- error.tsx 컴포넌트 생성
+(* 반드시 최상단에 "use client" // *client component)
+
+> 백엔드 서버 켜준상태, UI쪽 서버 켜고, npm run build
+> npm run dev UI쪽 서버 켜고,
+
+> 백엔드 서버 꺼주기
+
+2) Server Action : 클라이언트 단계에서 호출 가능한 함수
+=> 함수는 서버에서 실행될 수 있는 비동기 함수
+
+댓글생성 // 댓글삭제
+> 클라이언트 단계
+
+npx prisma studio
+
+revalidatePath() => Data Cache // Full Route Cache
+모두 리셋 시킨다.
+
+review-item-delete-button.tsx
+
+ㅡㅡㅡㅡㅡ
+
+고급 라우팅 패턴
+> 패럴랠 라우트 (Parallel Route)
+> 인터셉트 라우트 (Intercept Route)
+- modal
+> 최적화 & 배포

@@ -22,7 +22,7 @@ html body {
 #wrapper {
   width: 100%;
   height: 100%;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,40 +36,90 @@ html body {
 }
 #wrapper #wrapper-header .contents-title {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
 #wrapper #wrapper-header .contents-title .title {
   color: #55b2e4;
-  font: bold 1.4rem/1 "arial";
+  font: 500 1.4rem/1 "arial";
 }
 #wrapper #wrapper-header .contents-title .subtitle {
   font: normal 1.4rem/1 "arial";
 }
 #wrapper #wrapper-header .header-line {
-  width: 100%;
+  width: 50%;
   border-top: 1px solid #808080;
   margin: 4px 0;
 }
+#wrapper #wrapper-header .header-body {
+  font-size: 1.3rem;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#wrapper #wrapper-header .header-body ul {
+  width: 50%;
+}
+#wrapper #wrapper-header .header-body table {
+  width: 50%;
+  border-collapse: collapse;
+  text-align: left;
+  font: 600 1.2rem/1 "arial";
+}
+#wrapper #wrapper-header .header-body table th,
+#wrapper #wrapper-header .header-body table td {
+  padding: 6px;
+  color: #071878;
+}
 #wrapper #wrapper-body {
   width: 100%;
-  height: 270px;
+  height: 180px;
 }
 #wrapper #wrapper-body .contents-title {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
 #wrapper #wrapper-body .contents-title .title {
   color: #55b2e4;
-  font: bold 1.4rem/1 "arial";
+  font: 500 1.4rem/1 "arial";
 }
 #wrapper #wrapper-body .contents-title .subtitle {
   font: normal 1.4rem/1 "arial";
 }
 #wrapper #wrapper-body .video {
   width: 100%;
-  height: 240px;
-  background: url("../contents/iu_1.jpg") center/cover no-repeat;
-  margin-top: 10px;
+  height: 200px;
+  background: url("../contents/miniroom.png") center/cover no-repeat;
+  margin-top: 5px;
+}
+#wrapper #wrapper-footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#wrapper #wrapper-footer .footer-title {
+  display: flex;
+  justify-content: flex-start;
+}
+#wrapper #wrapper-footer .footer-title .title {
+  color: #55b2e4;
+  margin-right: 10px;
+  line-height: 1.5;
+}
+#wrapper #wrapper-footer .footer-title .footer-subtitle {
+  font: 600 1.2rem/2.5 "arial";
+}
+#wrapper #wrapper-footer .footer-text {
+  color: #808080;
+  font: 500 1.3rem/1.3 "arial";
+  margin-top: 2px;
+}
+#wrapper #wrapper-footer .footer-text span {
+  color: #55b2e4;
+  font-weight: 600;
 }

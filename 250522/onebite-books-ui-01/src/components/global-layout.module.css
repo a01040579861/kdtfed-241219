@@ -1,0 +1,22 @@
+.container {
+  max-width: 600px;
+  min-height: 100vh;
+  background: var(--light);
+  margin: 0 auto;
+  padding: 0 14px;
+  box-shadow: 0 0 28px rgb(255, 255, 255);
+
+  .header {
+    height: 60px;
+    font: bold 1.8rem/60px "arial";
+  }
+
+  .main {
+    padding: 10px 0px;
+  }
+
+  .footer {
+    padding: 100px 0px;
+    color: var(--footer);
+  }
+}

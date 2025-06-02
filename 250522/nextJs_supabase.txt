@@ -1,0 +1,18 @@
+스터디룸 > 업로드 집파일 > 오늘자 루트폴더에 압축해제
+> 
+
+6. supabase > session URL + DB password
+
+7. .env > 적용 (supabase password)
+ex) DATABASE_URL="postgresql://postgres.vboqiwsiocvjoonthjsj:[YOUR-PASSWORD]@@aws-0-ap-northeast-2.pooler.supabase.com:5432/postgres"
+
+8. 터미널
+next.js 터미널 명령어
+
+- npx prisma db push
+- npm run seed
+- npm run build
+- npm run start
+- npx prisma studio
+
+- npx create-next-app@14 onebite-books-ui-01

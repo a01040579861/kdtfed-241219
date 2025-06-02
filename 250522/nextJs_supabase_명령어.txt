@@ -1,0 +1,31 @@
+스터디룸 > 업로드 집파일 > 오늘자 루트폴더에 압축해제
+> 
+
+6. supabase > session URL + DB password
+
+7. .env > 적용 (supabase password)
+ex) DATABASE_URL="postgresql://postgres.vboqiwsiocvjoonthjsj:[YOUR-PASSWORD]@@aws-0-ap-northeast-2.pooler.supabase.com:5432/postgres"
+
+8. 터미널
+next.js 터미널 명령어
+
+- npx prisma db push
+- npm run seed
+- npm run build
+- npm run start
+- npx prisma studio
+
+- npx create-next-app@14 onebite-books-ui-01
+
+존재하지 않는 페이지 : 404 컴포넌트 페이지 구현
+
+Navigation : Link & href
+
+프로그래매틱 이동 : Programmatic Navigation : 
+단순히 a태그 처럼 어디론가 이동하는 것만 신경쓰는 것이 아니라, 특정 조건 및 사용자의
+이벤트 행위에 따라 이동결로를 관리, 제어 할 수 있게 하는 네비게이션
+
+Pre-Fetching : 사전에 패칭을 해온다 // 
+> 만약 사용자가 A페이지를 보고있다 > a태그로 되어있는 버튼이 3개!!!
+> 3개의 버튼을 충분히 클릭할 확률 > 미리 사용자가 해당페이지를 클릭할 수 있다라는
+가정하게 3개의 페이지를 미리 페칭!!

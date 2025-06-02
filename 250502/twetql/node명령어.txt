@@ -1,0 +1,10 @@
+node 설정
+
+vscode 터미널
+
+npm init -y
+npm i apollo-server graphql
+npm i nodemon -D (코드에 문제점이 있는지 모니터링 해줌)
+
+touch명령어는 환경변수 설정으로 설정하여 사용하든가,
+vscode 터미널 말고 bash, cmd에서 사용하기
